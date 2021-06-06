@@ -1,0 +1,1 @@
+En este apartado se subirán las imágenes para el acceso en la web

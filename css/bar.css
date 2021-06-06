@@ -1,0 +1,86 @@
+body
+{
+  margin: 0px;
+}
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    width:100%;
+  }
+
+  .topnav #myLinks{
+    width: 10px;
+    position: absolute;
+    left: 161px;
+    top: 0;
+  }
+
+ #myLinks {
+    display:flex;
+ }
+
+  .topnav a {
+    color: white;
+    padding: 20px 30px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+    border-bottom:solid black 1px;
+    text-align: center;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .icon {
+    background: black;
+  }
+
+   .icon:hover, .link:hover {
+    background: white;
+    color:black;
+  }
+
+  .active {
+    border-right:solid black 1px;
+    width: 100px;
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .active:hover {
+    background-color: #04AA3F;
+  }
+
+@media screen and (max-width:900px){
+
+  .active {
+    width: 100%;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position:fixed;
+    width:100%;
+  }
+
+  .topnav #myLinks {
+    display: none;
+    position:initial;
+    width: 100%;
+  }
+
+  .topnav a {
+    padding: 14px 16px;
+  }
+
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
