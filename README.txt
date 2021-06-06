@@ -6,5 +6,3 @@ Instrucciones:
 - Los otros elementos conforman las APIs de las funciones de conexión (conexión.php) y la página de inicio de sesión (login.php)
 - Utilizar el archivo style.css y javascript.js para todas las páginas.
 - Para editar la versión móvil ya se incluyó el código en style.css, ya está incluido en index.php sólamente.
-
-testing
