@@ -5,7 +5,7 @@ body
 
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #f6828c;
     width:100%;
   }
 
@@ -21,12 +21,12 @@ body
  }
 
   .topnav a {
-    color: white;
+    color:#2d2d34;
     padding: 20px 30px;
     text-decoration: none;
     display: block;
-    font-size: 17px;
-    border-bottom:solid black 1px;
+    font-size: 20px;
+    border-bottom:solid #00d9c0 1px;
     text-align: center;
   }
 
@@ -35,23 +35,26 @@ body
   }
 
   .icon {
-    background: black;
+    background: #f6828c;
   }
 
    .icon:hover, .link:hover {
-    background: white;
-    color:black;
+    background: #ffe4cf;
+    color: #247ba0;
   }
 
   .active {
-    border-right:solid black 1px;
     width: 100px;
-    background-color: #04AA6D;
-    color: white;
+    background-color: #f6828c;
+    color: #ffe4cf;
   }
 
-  .active:hover {
-    background-color: #04AA3F;
+  #title{
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-family: 'Playfair Display', serif;
+    font-style: bold;
   }
 
 @media screen and (max-width:900px){
@@ -62,7 +65,7 @@ body
 
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(95,187,151);
     position:fixed;
     width:100%;
   }
