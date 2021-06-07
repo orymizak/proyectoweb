@@ -1,3 +1,5 @@
 git init
-git pull proyectoweb main
+git add * 
+git stash
+git pull proyectoweb main --force
 pause
