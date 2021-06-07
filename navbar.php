@@ -9,11 +9,10 @@
     <div class="topnav">
       <a href="index.php" class="active" title ="Ir a inicio">Logo</a>
       <div id="myLinks">
-        <a class = "link" href="#element">Elemento</a>
-        <a class = "link" href="#element">Elemento</a>
-        <a class = "link" href="#element">Elemento</a>
-        <a class = "link" href="#element">Elemento</a>
-        <a class = "link" href="#element">Elemento</a>
+        <a class = "link" href="#element">inicio</a>
+        <a class = "link" href="#element">Productos</a>
+        <a class = "link" href="#element">Acerca de...</a>
+        
       </div>
       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
       <a href="javascript:void(0);" title ="Men&uacute;" class="icon" onclick="myFunction()">
