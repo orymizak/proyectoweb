@@ -17,17 +17,22 @@ body
   }
 
  #myLinks {
+    position: fixed;
     display:flex;
  }
 
   .topnav a {
     color:#2d2d34;
-    padding: 20px 30px;
+    padding: 12px 25px;
     text-decoration: none;
     display: block;
     font-size: 20px;
-    border-bottom:solid #00d9c0 1px;
+    height:50px;
     text-align: center;
+  }
+
+  .topnav {
+    border-bottom:solid #00d9c0 1px;
   }
 
   .topnav a.icon {
@@ -51,9 +56,8 @@ body
 
   #title{
     font-size: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
     font-family: 'Playfair Display', serif;
+    margin-top: -3px;
     font-style: bold;
   }
 
@@ -77,7 +81,16 @@ body
   }
 
   .topnav a {
+    height:50px;
     padding: 14px 16px;
+  }
+
+  #title{
+    margin-top: -2px;
+  }
+  #myLinks
+  {
+    margin-top: 0px;
   }
 
   .topnav a.icon {

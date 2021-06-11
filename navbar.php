@@ -16,7 +16,8 @@
       <div id="myLinks">
         <a class = "link" href="#element">Inicio</a>
         <a class = "link" href="#element">Productos</a>
-        <a class = "link" href="#element">Acerca de...</a>
+        <a class = "link" href="#element">Nosotros</a>
+        <a class = "link" href="#element">Login</a>
         
       </div>
       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
