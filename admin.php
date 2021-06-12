@@ -3,7 +3,8 @@ include_once 'conexion.php';
 $objeto = new conexion();
 $conexion = $objeto->Conectar();
 
-$consulta = "SELECT id, nombre, descripcion, precio, imagen FROM productos";
+$consulta = "SELECT ID, name, description, price, date, stock FROM products";
+// $consulta = "SELECT * FROM images";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
