@@ -12,13 +12,13 @@
 
     if ($result->num_rows == 1){
         $response['status'] = 1;
-        $response['status_text'] = "Login success";
+        $response['status_text'] = "Usted se ha conectado, bienvenido $username.";
         $response['user_arr'] = $result->fetch_assoc();
     }
     else
     {
         $response['status'] = 0;
-        $response['status_text'] = "Login failed";
+        $response['status_text'] = "Error, la contraseña del usuario $username no es correcta, verifíquela.";
     }
     $mysqli->close();
     header('Content-Type: application/json');

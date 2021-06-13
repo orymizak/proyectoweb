@@ -5,12 +5,12 @@
     require "conexion.php";
 
     // declaración de variables
-    $nombre = $_POST['nombre'];
-    $email = $_POST['email'];
-    $contra = hash('sha512', $_POST['contra']);
+    $username = $_POST['username'];
+    $phone = $_POST['phone'];
+    $password = hash('sha512', $_POST['password']);
     $message = "";
 
-    $sql = "SELECT * FROM users WHERE username = '$nombre'";
+    $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = $mysqli->query($sql);
     $response = array();
 

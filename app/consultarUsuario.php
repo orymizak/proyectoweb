@@ -17,7 +17,7 @@
     else
     {
         $response['status'] = 0;
-        $response['status_text'] = "No se encuentra el usuario.";
+        $response['status_text'] = "Se ha registrado el usuario con éxito. Se ha iniciado la sesión.";
     }
     $mysqli->close();
     header('Content-Type: application/json');

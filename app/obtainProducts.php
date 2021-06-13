@@ -3,7 +3,7 @@
     require "conexion.php";
     
    
-    $sql = "SELECT * FROM productos";
+    $sql = "SELECT * FROM products";
 
     $query = $mysqli->query($sql);
 
