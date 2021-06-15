@@ -1,7 +1,9 @@
 <?php
     error_reporting(E_ERROR);
 
-    require "conexion.php";
+    header('Content-type:application/json; charset=utf-8');
+
+    require "connection.php";
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -14,6 +16,9 @@
         $response['status'] = 1;
         $response['status_text'] = "Usted se ha conectado, bienvenido $username.";
         $response['user_arr'] = $result->fetch_assoc();
+        
+        session_start();
+        $_SESSION['username'] = $username;
     }
     else
     {

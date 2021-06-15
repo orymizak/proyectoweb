@@ -1,7 +1,7 @@
 <?php
 
 	// este no será del todo necesario 
-    require "conexion.php";
+    require "connection.php";
     
     $idUsuario = $_POST['idUsuario'];
     

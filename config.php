@@ -10,7 +10,6 @@
     	<link rel ="stylesheet" href="js/javascript.js"/>
   	<!-- Para incluir una página en otra se usa la siguiente función fuera del body -->
   	<!-- Esto es útil para incluir la conexión de la base de datos en las páginas como la configuración de usuarios, login, etc., e incluso para incluir la barra de navegación. -->
-  	<?php include "navbar.php" ?>
     <title>Configuraci&oacute;n del usuario</title>
   </head>
   <body>

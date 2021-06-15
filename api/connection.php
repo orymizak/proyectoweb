@@ -1,15 +1,25 @@
 <?php
+    //Encbezado CROS para que pueda hacerse la llamada
+
+	$server = "orymizak.ddns.net";
+	$dbname = "seyda_db";
+	$username = "seyda_admin";
+	$password = "seydamoda";
+
+	 	$mysqli = new mysqli($server, $username, $password, $dbname);
+	 	// Aquí sucede la conexión
+	 	//echo 'Conectado';
+	 	return $mysqli;
+	 	die ("Connection failed: " . $mysqli->connect_error);
+?>
+
+
+<!-- 
+<?php
 //$database = "seyda_bd";
 //$username = "seyda_admin";
 //$password = "seydamoda";
 //$port = "orymizak.ddns.net";
-
-$database = "seydabd";
-$username = "root";
-$password = "";
-$port = "localhost:33065";
-
-
 
 // falta hacer petición
 $conn = mysqli_connect($port, $username, $password, $database);
@@ -33,4 +43,4 @@ if($nr==1){
 }else{
     echo "datos incorrectos";
 }
-?>
+?> -->

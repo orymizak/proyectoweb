@@ -12,23 +12,22 @@
     	<link rel ="stylesheet" href="js/javascript.js"/>
   	<!-- Para incluir una página en otra se usa la siguiente función fuera del body -->
   	<!-- Esto es útil para incluir la conexión de la base de datos en las páginas como la configuración de usuarios, login, etc., e incluso para incluir la barra de navegación. -->
+    <?php include "navbar.php" ?>
     <?php include "api/connection.php" ?>
   </head>
-  <body style = "background-color: 
-
-    background-color: #ffe4cf;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  ">
+  <body>
   <!-- Ejemplo de acentos -->
   <!-- a = &aacute; ñ = &ntilde; ? = &quest; ¿ = &iquest; ! = &excl; ¡ = &iexcl; % = &percnt; -->
   <!-- AQUÍ VA EL CONTENIDO -->
+  
+
   <div>&nbsp;
       <div class ="bg-text">
         <p style ="font-size:25px"><b>&iexcl;Bienvenido a Seyda&#33; El mejor sitio para comprar pulseras y accesorios personalizados.</b></p>
         <p style ="font-size:16px">Aqu&iacute; podr&aacute;s adquirir los mejores estilos de pulseras ideales para ti.</p>
         <br>
+
+        
         <div class = "container" style ="text-align: left; margin-left:5px;"> 
           <h2>&Uacute;ltimas novedades</h2>
 
@@ -78,6 +77,7 @@
               </a>
 
           </div>
+
 
         </div><br><br>
         <a href = "">Ir al cat&aacute;logo</a><br><br>

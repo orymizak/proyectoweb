@@ -1,19 +1,27 @@
+/* Global CSS */
+
 body
 {
   margin: 0px;
+    font-family:bahnschrift,garamond,serif;
+}
+.bg-text {
+  min-width: 30px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #f6828c;
+  width:100%;
 }
 
-  .topnav {
-    overflow: hidden;
-    background-color: #f6828c;
-    width:100%;
-  }
+div.nav-fill {
+  width: 300px;
+}
 
   .topnav #myLinks{
     width: 10px;
     position: absolute;
     left: 161px;
-    top: 0;
   }
 
  #myLinks {
@@ -22,7 +30,7 @@ body
  }
 
   .topnav a {
-    color:#2d2d34;
+    font-weight: bold;
     padding: 12px 25px;
     text-decoration: none;
     display: block;
@@ -32,7 +40,7 @@ body
   }
 
   .topnav {
-    border-bottom:solid #00d9c0 1px;
+    border-bottom: solid white 2px;
   }
 
   .topnav a.icon {
@@ -43,28 +51,87 @@ body
     background: #f6828c;
   }
 
-   .icon:hover, .link:hover {
+   .icon:hover, 
+   .link:hover {
     background: #ffe4cf;
     color: #247ba0;
+    transition: 1s;
+
+/*  // color seleeccionado
+    background: #ffe4cf;
+    color: #247ba0;*/
   }
 
   .active {
     width: 100px;
-    background-color: #f6828c;
     color: #ffe4cf;
   }
 
   #title{
     font-size: 20px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 5px;
     font-family: 'Playfair Display', serif;
-    margin-top: -3px;
+    margin-top: -2px;
+    margin-left: 15px;
     font-style: bold;
   }
 
-@media screen and (max-width:900px){
+@media screen and (min-width:901px) {
+/*
+.link:hover {
+    padding-left: 25px;
+    background: #ffe4cf;
+    padding-right: 25px;
+    box-shadow: inset -2px 2px 0 0 #ffffff, inset 2px 1px 0 0 #ffffff;
+    border-radius: 15px 15px 0px 0px;
+  }
+*/
+
+.link {
+    border-radius: 15px 15px 0px 0px;
+    background-size: 100% 200%; 
+    border-bottom: solid white 2px;
+    transition: 
+    box-shadow 3s,
+    background-color 1s,
+    background-position 1s, 
+    color 0s;
+}
+
+.link:hover {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, #f6828c 50%, #ffe4cf 0%);
+    background-color: #F0D7C4;
+    border-bottom: rgba(0,0,0,0) 2px;
+    box-shadow: inset -2px 2px 0 0 #ffffff, inset 2px 1px 0 0 #ffffff;
+    border-radius: 15px 15px 0px 0px;
+    transition: 
+    background-position .2s;
+  }
+
+  .link:focus, .link:hover {
+    background-position: 100% 100%;
+    transition: .6s;
+  }
+
+  .topnav #myLinks{
+    top: 2px;
+  }
+
+}
+
+@media screen and (max-width:900px) {
 
   .active {
     width: 100%;
+  }
+
+  #seyda {
+    background-color: #f6828c;
   }
 
   .topnav {
@@ -88,6 +155,7 @@ body
   #title{
     margin-top: -2px;
   }
+
   #myLinks
   {
     margin-top: 0px;
@@ -99,4 +167,15 @@ body
     left: 0;
     top: 0;
   }
+
+   .icon:hover {
+    color: white;
+    /*background: rgba(0,0,0,0);*/
+
+  }
+
+   .icon:active, .link:active {
+    color: #247ba0;
+  }
+
 }

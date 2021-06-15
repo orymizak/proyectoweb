@@ -2,7 +2,7 @@
     
     // declaración de elementos base
     error_reporting(E_ERROR);
-    require "conexion.php";
+    require "connection.php";
 
     // declaración de variables
     $username = $_POST['username'];

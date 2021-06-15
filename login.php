@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<HTML lang="es">
+<HTML lang ="es">
+  <head>
+      <meta charset="utf-8">
+        <title> Seyda || Login </title>
+        <meta name = "description" content ="Tienda de pulseras y accesorios">
+        <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
+        <link rel ="stylesheet" href="css/style.css"/>
+        <link rel ="stylesheet" href="js/javascript.js"/>
 
-<head>
-    <meta charset = "utf-8">
-    <title> Seyda || Login </title>
-    <meta name = "description" content ="Tienda de pulseras y accesorios">
-    <link rel="stylesheet" href="css/login.css"/>
-
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-
-    <body>
-        <div class= "wrapper fadeInDown">
-            <div id="formContent">
-                <div>
-                    <img src="src/admin.png" id="icon" alt="icono usuario" />
-                </div>
-
-                <form id="loginForm" method="post" action="connection.php">
-                    <input type="text" id="username" name="user" placeholder="username">
-                    <input type="password" id="password" name="password" placeholder="password">
-                    <input type="submit" value="Log In" >
-                </form>
+    <?php include "api/connection.php" ?>
+  </head>
+  <body>
+  <div>&nbsp;
+      <div class ="bg-text">
+        <p style ="font-size:25px"><b>Iniciar sesi&oacute;n</b></p>
+            <div>
+                <img src="src/admin.png" id="icon" alt="icono usuario" />
+                <!-- <img src="https://logos.textgiraffe.com/logos/logo-name/Seyda-designstyle-smoothie-m.png" style ="width:50%; max-width:300px"/> -->
             </div>
-        </div>
-    </body>
-
+                <form id="loginForm" method="post" action="api/login.php"><br><br>
+                Usuario:<br><br>
+                <input type="text" id="username" title= "Ingresa tu nombre de usuario" name="username" placeholder="username"><br><br>
+                Contrase&ntilde;a:<br><br>
+                <input type="password" id="password" title= "Ingresa tu contrase&ntilde;a" name="password" placeholder="password"><br><br>
+                <input type="submit" value="Conectarse" >
+            </form>
+      </div><br><br>
+  </div>
+    <!-- FIN DE CONTENIDO -->
+  </body>
 </html>
