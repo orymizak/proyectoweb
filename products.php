@@ -12,7 +12,7 @@
     	<link rel ="stylesheet" href="js/javascript.js"/>
   	<!-- Para incluir una página en otra se usa la siguiente función fuera del body -->
   	<!-- Esto es útil para incluir la conexión de la base de datos en las páginas como la configuración de usuarios, login, etc., e incluso para incluir la barra de navegación. -->
-    <?php include "api/connection.php" ?>
+    <?php include "navbar.php" ?>
   </head>
   <body style = "background-color: 
 
@@ -29,58 +29,28 @@
         <p style ="font-size:25px"><b>&iexcl;Bienvenido a Seyda&#33; El mejor sitio para comprar pulseras y accesorios personalizados.</b></p>
         <p style ="font-size:16px">Aqu&iacute; podr&aacute;s adquirir los mejores estilos de pulseras ideales para ti.</p>
         <br>
+
         <div class = "container" style ="text-align: left; margin-left:5px;"> 
           <h2>&Uacute;ltimas novedades</h2>
 
-          <div class = "box">
-              <a href="">
-                <div class="box-row">
-                  <div class="box-cell box1">
-                    <img src="src/agatha.jpg" class ="index-img" title="pulseras para pareja" alt="pulseras para pareja agatha">
+          <div class = "cont">
+              <?php 
+                include ("api/connection.php");
+                $query = "SELECT * FROM productos";
+                $resultado = $mysqli->query($query);
+                while($row = $resultado->fetch_assoc()){
+                  ?>
+                  <div class = "card">
+                    <h4><?php echo $row['nombre']; ?></h4>
+                    <img src = "data:image/jpg;base64, <?php echo base64_encode($row['imagen']);?>">
+                    <p><?php echo $row['descripcion']; ?></h6>
                   </div>
-                  <div class="box-cell box2">
-                    <p>Agatha y Bola Blanca</p> 
-                    <p>Par de pulseras tejidas con hilo grueso y piedra Agatha y bola blanca al centro.</p>
-                  </div>
-                  <div class="box-cell2 box3">
-                  </div>
-                </div>
-              </a>
-              &nbsp;
-
-              <a href="">
-                <div class="box-row">
-                  <div class="box-cell box1">
-                    <img src="src/universo.jpg" class = "index-img" title="pulsera universo" alt="pulsera universo">
-                  </div>
-                  <div class="box-cell box2">
-                    <p>Pulsera Universo</p>
-                    <p>Pulsera de piedras naturales con separadores en chapa de oro 24k.<br></p>
-                  </div>
-                  <div class="box-cell2 box3">
-                  </div>
-                </div>
-              </a>
-              &nbsp;
-
-              <a href="">
-                <div class="box-row">
-                  <div class="box-cell box1">
-                    <img src="src/tobillera.jpg" class = "index-img" title="tobillera pucca" alt="tobillera pucca">
-                  </div>
-                  <div class="box-cell box2">
-                    <p>Tobillera Pucca</p>
-                    <p>Tobillera de hilo rodeada de Pucca de colores y cuarzo cristalizado.</p>
-                  </div>
-                  <div class="box-cell2 box3">
-                  </div>
-                </div>
-              </a>
-
+                 <?php   
+                }
+                ?>  
           </div>
 
         </div><br><br>
-        <a href = "">Ir al cat&aacute;logo</a><br><br>
       </div><br><br>
   </div>
     <!-- FIN DE CONTENIDO -->

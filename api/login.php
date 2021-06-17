@@ -6,7 +6,9 @@
     $password = $_POST['password'];
     $device = $_POST['device'];
           
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password ='$password'";
+    //$sql = "SELECT * FROM users WHERE username = '$username' AND password ='$password'";
+    $sql = "SELECT * FROM usuario WHERE username = '$username' AND password ='$password'";
+
     $result = $mysqli->query($sql);
 
         // LOGIN PARA WEB

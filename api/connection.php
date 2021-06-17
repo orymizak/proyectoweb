@@ -1,10 +1,15 @@
 <?php
     //Encbezado CROS para que pueda hacerse la llamada
 
-	$server = "orymizak.ddns.net";
+	/*$server = "orymizak.ddns.net";
 	$dbname = "seyda_db";
 	$username = "seyda_admin";
-	$password = "seydamoda";
+	$password = "seydamoda";*/
+
+	$server = "localhost:33065";
+	$dbname = "seydabd";
+	$username = "root";
+	$password = "";
 
 	 	$mysqli = new mysqli($server, $username, $password, $dbname);
 	 	// Aquí sucede la conexión

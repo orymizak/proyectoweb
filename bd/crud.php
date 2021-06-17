@@ -7,7 +7,15 @@
     $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
     $descripcion = (isset($_POST['descripcion'])) ? $_POST['descripcion'] : '';
     $precio = (isset($_POST['precio'])) ? $_POST['precio'] : '';
-    $imagen = (isset($_POST['imagen'])) ? $_POST['imagen'] : '';
+    //este sí funciona
+    //$imagen = (isset($_POST['imagen'])) ? $_POST['imagen'] : '';
+    //este también
+    $imagen = filter_input(INPUT_POST, 'imagen');
+
+
+    //$imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+    //$imagen = (isset($_POST['imagen'])) ? addslashes(file_get_contents($_FILES['imagen']['tmp_name'])) : '';
+    //$imagen = (isset($_POST['imagen'])) ? $_POST['imagen'] : '';
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
     $id = (isset($_POST['id'])) ? $_POST['id'] : '';
 

@@ -17,7 +17,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 
     <head>
         <meta charset = "utf-8">
-        <title> Seyda || Login </title>
+        <title> Seyda || Administrador </title>
         <meta name = "description" content ="Tienda de pulseras y accesorios">
         <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
         
@@ -72,7 +72,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                     <td><?php echo  $dat['nombre']?></td>
                                     <td><?php echo  $dat['descripcion']?></td>
                                     <td><?php echo  $dat['precio']?></td>
-                                    <td><?php echo  $dat['imagen']?></td>
+                                    <td><img src="data:image/jpg;base64,<?php echo base64_encode($dat['imagen']); ?>"/></td>
                                     <td></td>
                                 </tr>
                                 <?php
@@ -97,7 +97,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                 </span>
                         </button>
                     </div>
-                    <form id="formProducto">
+                    <form id="formProducto" method="POST" enctype="multipart/form-data">
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="nombre" class="col-form-label">Nombre:</label>
@@ -113,7 +113,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                             <div class="form-group">
                                 <label for="imagen" class="col-form-label">Imagen:</label>
-                                <input type="text" class="form-control" id="imagen">
+                                <input type="file" class="form-control" id="imagen">
                             </div>
                         </div>
                         <div class="modal-footer">
