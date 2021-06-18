@@ -25,7 +25,7 @@
                       <img src="src/admin.png" id="icon" alt="icono usuario" />
                       <!-- <img src="https://logos.textgiraffe.com/logos/logo-name/Seyda-designstyle-smoothie-m.png" style ="width:50%; max-width:300px"/> -->
                   </div>
-                      <form id="loginForm" method="post" action="api/login.php"><br><br>
+                      <form id="loginForm" method="post" action="api/loginUser.php"><br><br>
                       Usuario:<br><br>
                       <input type="text" id="username" title= "Ingresa tu nombre de usuario" name="username" placeholder="username"><br><br>
                       Contrase&ntilde;a:<br><br>

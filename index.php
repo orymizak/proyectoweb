@@ -32,6 +32,20 @@
         <div class = "container" style ="text-align: left; margin-left:5px;"> 
           <h2>&Uacute;ltimas novedades</h2>
 
+          <div class = "test">
+            <section class = "test-box1">
+            <p>
+              Texto
+            </p>
+            </section>
+            <aside>
+              <p>
+                Texto
+              </p>
+            </aside>
+          </div>
+
+
           <div class = "box">
               <a href="">
                 <div class="box-row">
