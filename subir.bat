@@ -1,5 +1,6 @@
 @echo off
 
+
 git init
 git add .
 
@@ -8,4 +9,6 @@ echo Se ha agregado el mensaje al commit.
 git commit -am "%id%"
 
 git pull proyectoweb master
+git push proyectoweb master
+
 pause
