@@ -7,5 +7,5 @@ set /p id="Ingresa los cambios realizados:"
 echo Se ha agregado el mensaje al commit.
 git commit -am "%id%"
 
-git push proyectoweb master
+git pull proyectoweb master
 pause
