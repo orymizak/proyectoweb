@@ -2,7 +2,6 @@
 
     require "connection.php";
     $username = "Hansel";
-   
     $sql = "SELECT * FROM users WHERE username = '$username'";
 
     $query = $mysqli->query($sql);
