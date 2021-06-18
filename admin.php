@@ -33,7 +33,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.25/b-1.7.1/r-2.2.9/sl-1.3.3/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/b-1.7.1/r-2.2.9/sl-1.3.3/datatables.min.js"></script>
 
-        <script src="modal.js"></script>
+        <script src="js/modal.js"></script>
     </head>
 
     <body>
