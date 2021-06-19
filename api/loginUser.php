@@ -6,6 +6,9 @@
     $password = $_POST['password'];
     $device = $_POST['device'];
 
+    echo $username;
+    echo $password;
+
     $sql = "SELECT * FROM users WHERE username = '$username' AND password ='$password'";
     $result = $mysqli->query($sql);
 
@@ -16,7 +19,7 @@
                 session_start();
                 $_SESSION['username'] = $username;
                 echo "<script type='text/javascript'> alert('Bienvenido.'); 
-                window.location.href='http://localhost/test.php';</script>";
+                window.location.href='http://localhost/proyectoweb/test.php';</script>";
             }
 
             if ($result->num_rows == 0) {

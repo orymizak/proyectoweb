@@ -80,7 +80,7 @@
 
 
         </div><br><br>
-        <a href = "">Ir al cat&aacute;logo</a><br><br>
+        <a href = "products.php">Ir al cat&aacute;logo</a><br><br>
       </div><br><br>
   </div>
     <!-- FIN DE CONTENIDO -->

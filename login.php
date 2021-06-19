@@ -8,7 +8,8 @@
         <link rel ="stylesheet" href="css/style.css"/>
         <link rel ="stylesheet" href="js/javascript.js"/>
 
-    <?php include "api/connection.php" ?>
+    <!--?php include "api/connection.php" ?-->
+    <?php include "navbar.php" ?>
   </head>
   <body>
 
@@ -27,10 +28,11 @@
                   </div>
                       <form id="loginForm" method="post" action="api/loginUser.php"><br><br>
                       Usuario:<br><br>
-                      <input type="text" id="username" title= "Ingresa tu nombre de usuario" name="username" placeholder="username"><br><br>
+                      <input type="text" REQUIRED id="username" title= "Ingresa tu nombre de usuario" name="username" placeholder="username"><br><br>
                       Contrase&ntilde;a:<br><br>
-                      <input type="password" id="password" title= "Ingresa tu contrase&ntilde;a" name="password" placeholder="password"><br><br>
+                      <input type="password" REQUIRED id="password" title= "Ingresa tu contrase&ntilde;a" name="password" placeholder="password"><br><br>
                       <input type="submit" value="Conectarse" >
+                      <a href="register.php" title="Registrar usuario"> <p>¿No tienes una cuenta? Reg&iacute;strate aqu&iacute;</p></a>
                   </form>
             </div><br><br>
         </div>;';

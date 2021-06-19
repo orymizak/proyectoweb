@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
         <link rel ="stylesheet" href="css/style.css"/>
         <link rel ="stylesheet" href="js/javascript.js"/>
+        <?php include "navbar.php" ?>
 
   </head>
   <body>
@@ -23,8 +24,8 @@
                 <input type="password" name="_password" id="_password" title= "Ingresa tu contrase&ntilde;a" placeholder="Contrase&ntilde;a" minlength="8" required onkeyup='check();'><br><br>
                 Repita su contrase&ntilde;a:<br><br>
                 <input type="password" name="_confirm_password" id="_confirm_password" title= "Repite tu contrase&ntilde;a" placeholder="Repita su contrase&ntilde;a" minlength="8" required onkeyup='check();'><br><br>
-                Tel&eacute;fono:<br><br>
-                <input type="text" id="_phone" title= "Ingresa tu n&uacute;mero de tel&eacute;fono" name="_username" placeholder="N&uacute;mero de tel&eacute;fono" minlength="10" maxlength="10" required><br><br>
+                <!--Tel&eacute;fono:<br><br>
+                <input type="text" id="_phone" title= "Ingresa tu n&uacute;mero de tel&eacute;fono" name="_username" placeholder="N&uacute;mero de tel&eacute;fono" minlength="10" maxlength="10" required><br><br-->
                 <br><span id = "message"></span><br>
                 <input type="submit" value="Registrarse" >
             </form>

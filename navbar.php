@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="topnav">
-      <a href="index.php" class="active" title ="Ir a inicio">
+      <a href="main.php" class="active" title ="Ir a inicio">
         <p id="title">SEYDA</p>
       </a>
 
