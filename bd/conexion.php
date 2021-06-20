@@ -1,14 +1,16 @@
 <?php
  class Conexion{
      public static function Conectar(){
-         //define('servidor','orymizak.ddns.net');
-         define('servidor','localhost:33065');
-         //define('nombre_bd','seyda_bd');
-         define('nombre_bd','seydabd');
-         //define('usuario','seyda_admin');
-         //define('password','seydamoda');
-         define('usuario','root');
-         define('password','');
+
+         define('servidor','orymizak.ddns.net');
+         define('nombre_bd','seyda_db');
+         define('usuario','seyda_admin');
+         define('password','seydamoda');
+
+         // define('servidor','localhost:33065');
+         // define('nombre_bd','seydabd');
+         // define('usuario','root');
+         // define('password','');
 
          $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
          try{

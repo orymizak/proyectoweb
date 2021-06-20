@@ -8,12 +8,10 @@
         <link rel ="stylesheet" href="css/style.css"/>
         <link rel ="stylesheet" href="js/javascript.js"/>
 
-    <!--?php include "api/connection.php" ?-->
-    <?php include "navbar.php" ?>
   </head>
   <body>
 
-  <?php include('api/connection.php');
+  <?php 
 
     session_start(); 
     $username = isset($_SESSION['username']);

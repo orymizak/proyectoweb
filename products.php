@@ -12,7 +12,6 @@
     	<link rel ="stylesheet" href="js/javascript.js"/>
   	<!-- Para incluir una página en otra se usa la siguiente función fuera del body -->
   	<!-- Esto es útil para incluir la conexión de la base de datos en las páginas como la configuración de usuarios, login, etc., e incluso para incluir la barra de navegación. -->
-    <?php include "navbar.php" ?>
   </head>
   <body style = "background-color: 
 
@@ -35,19 +34,17 @@
 
           <div class = "cont">
               <?php 
-                include ("api/connection.php");
-                $query = "SELECT * FROM productos";
+                $query = "SELECT * FROM products";
                 $resultado = $mysqli->query($query);
-                while($row = $resultado->fetch_assoc()){
-                  ?>
+
+                while($row = $resultado->fetch_assoc()) {
+                  echo '
                   <div class = "card">
-                    <h4><?php echo $row['nombre']; ?></h4>
-                    <img src = "data:image/jpg;base64, <?php echo base64_encode($row['imagen']);?>">
-                    <p><?php echo $row['descripcion']; ?></h6>
-                  </div>
-                 <?php   
-                }
-                ?>  
+                    <h4>'.$row['name'].'</h4>
+                    <img style = "width:10%" src="data:image;base64,'.base64_encode($row["image"]).'">
+                    <p> '.$row['description'].'</h6>
+                  </div>';
+                }?>
           </div>
 
         </div><br><br>

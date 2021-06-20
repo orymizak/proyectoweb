@@ -1,7 +1,8 @@
 <?php
 
+     error_reporting(E_ERROR);
     require "connection.php";
-    $username = "user";
+    $username = "hansel2123";
     $sql = "SELECT * FROM users WHERE username = '$username'";
 
     $query = $mysqli->query($sql);

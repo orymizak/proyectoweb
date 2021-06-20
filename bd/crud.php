@@ -4,44 +4,45 @@
     $conexion = $objeto->Conectar();
 
     //Recibir datos enviados mediante POST
-    $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
-    $descripcion = (isset($_POST['descripcion'])) ? $_POST['descripcion'] : '';
-    $precio = (isset($_POST['precio'])) ? $_POST['precio'] : '';
+    $name = (isset($_POST['name'])) ? $_POST['name'] : '';
+    $description = (isset($_POST['description'])) ? $_POST['description'] : '';
+    $price = (isset($_POST['price'])) ? $_POST['price'] : '';
     //este sí funciona
-    //$imagen = (isset($_POST['imagen'])) ? $_POST['imagen'] : '';
+    //$image = (isset($_POST['image'])) ? $_POST['image'] : '';
     //este también
-    $imagen = filter_input(INPUT_POST, 'imagen');
+    $image = filter_input(INPUT_POST, 'image');
 
 
-    //$imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
-    //$imagen = (isset($_POST['imagen'])) ? addslashes(file_get_contents($_FILES['imagen']['tmp_name'])) : '';
-    //$imagen = (isset($_POST['imagen'])) ? $_POST['imagen'] : '';
+    //$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+    //$image = (isset($_POST['image'])) ? addslashes(file_get_contents($_FILES['image']['tmp_name'])) : '';
+    //$image = (isset($_POST['image'])) ? $_POST['image'] : '';
+
     $opcion = (isset($_POST['opcion'])) ? $_POST['opcion'] : '';
-    $id = (isset($_POST['id'])) ? $_POST['id'] : '';
+    $ID = (isset($_POST['ID'])) ? $_POST['ID'] : '';
 
     switch($opcion){
         case 1:
-            $consulta = "INSERT INTO productos (nombre, descripcion, precio, imagen) VALUES ('$nombre','$descripcion', '$precio', '$imagen')";
+            $consulta = "INSERT INTO products (name, description, price, image) VALUES ('$name','$description', '$price', '$image')";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
 
-            $consulta = "SELECT id, nombre, descripcion, precio, imagen FROM productos ORDER BY id DESC LIMIT 1";
+            $consulta = "SELECT ID, name, description, price, image FROM products ORDER BY ID DESC LIMIT 1";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 2:
-            $consulta = "UPDATE productos SET nombre='$nombre', descripcion='$descripcion', precio='$precio', imagen='$imagen' WHERE id='$id' ";
+            $consulta = "UPDATE products SET name='$name', description='$description', price='$price', image='$image' WHERE ID='$ID' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
 
-            $consulta = "SELECT id, nombre, descripcion, precio, imagen FROM productos WHERE id='$id' ";
+            $consulta = "SELECT ID, name, description, price, image FROM products WHERE ID='$ID' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
             break;
         case 3:
-            $consulta = "DELETE from productos WHERE id='$id' ";
+            $consulta = "DELETE from products WHERE ID='$ID' ";
             $resultado = $conexion->prepare($consulta);
             $resultado->execute();
             break;

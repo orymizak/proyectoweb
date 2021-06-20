@@ -5,41 +5,32 @@
     require "connection.php";
 
     // declaración de variables
-    $username = $_POST['_username'];
-    //$phone = $_POST['phone'];
-    $password = hash('sha512', $_POST['_password']);
-    $message = "";
+    $username = $_POST['username'];
+    $phone = $_POST['phone'];
+    $password = $_POST['password'];
+    $device = $_POST['device'];
 
-    $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $mysqli->query($sql);
-    $response = array();
+    // para encriptar
+    // $password = password_hash($password, PASSWORD_DEFAULT);
 
-    if ($result->num_rows == 1){
-        /*$response['status'] = 1;
-        $response['status_text'] = "El usuario ya existe";
-        $response['user_arr'] = $result->fetch_assoc();*/
-        echo "<script type='text/javascript'> alert('El usuario ya existe.'); window.location.href='http://localhost/proyectoweb/register.php';</script>";
-    }
-    else
-    {
-        /*$response['status'] = 0;
-        $response['status_text'] = "Permitir registro";*/
-        //$sql = "INSERT INTO users (type, username, password, phone, restricted) VALUES (0,'$nombre', '$contra', '$email', 0)";
-        $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+
+        $sql = "INSERT INTO users (type, username, password, phone, restricted) VALUES (0,'$username', '$password', '$phone', 0)";
         $query = $mysqli->query($sql);
-        echo "<script type='text/javascript'> alert('Usuario creado con éxito.'); window.location.href='http://localhost/proyectoweb/login.php';</script>";
+
+    // LOGIN PARA WEB
+    if (is_null($device)) {
+
+        echo '<script>alert("Se ha registrado con éxito, usted ha iniciado sesión"); window.location.href="http://localhost/test.php";</script>';
+
+        $mysqli->close();
+        session_start();
+        $_SESSION['username'] = $username;
+                
     }
-    $mysqli->close();
-    //header('Content-Type: application/json');
-    echo json_encode($response);
 
+    if ($device == "1") {
 
-// CREACIÓN
+        // REGISTRO BÁSICO
+        header('Content-Type: application/json');
 
-  //   {
-  //    $sql = "INSERT INTO users (type, username, password, phone, restricted) VALUES (0,'$nombre', '$contra', '$email', 0)";
-  //   	$query = $mysqli->query($sql);
-  //       echo "usuario creado.";
-  //   }
-  //    echo "Error, no se ha podido crear el usuario.";
-?>
+    }

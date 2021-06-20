@@ -18,21 +18,21 @@
   	  <div id="myLinks">
 
         <a id="btn_1" class="link" title ="Ir al cat&aacute;logo" href ="#">Cat&aacute;logo</a>
-      	<a id="btn_2" class="link" title ="M&aacute;s informaci&oacute;n acerca de nosotros" href ="#">Cuenta</a>
-      	<a id="btn_3" class="link" title ="&iexcl;Con&eacute;ctate&excl;" href ="#">Test</a>
-      	<a id="btn_4" class="link" title ="&iexcl;Con&eacute;ctate&excl;" href ="#">
+      	<a id="btn_2" class="link" title ="M&aacute;s informaci&oacute;n acerca de nosotros" href ="#">
 
         <?php include('api/connection.php');
 
           session_start(); 
+
           $username = isset($_SESSION['username']);
             if ($username == null || $username == '') {
               echo "Mi&nbsp;cuenta</a>";
+              echo '<a id="btn_3" class="link" title ="&iexcl;Con&eacute;ctate&excl;" href ="#">Registrarse</a>';
             }
 
             else {
               echo "Cuenta&nbsp;de&nbsp;".$_SESSION['username']."</a>";
-              echo '<a id="btn_5" class="link-logout" title ="Salir" href ="#">Cerrar&nbsp;sesi&oacute;n</a>';
+              echo '<a id="btn_4" class="link-logout" title ="Salir" href ="api/logout.php">Cerrar&nbsp;sesi&oacute;n</a>';
               // $sql ="SELECT * from users where username = '{$_SESSION['username']}'";
               // $ret = mysqli_query($mysqli, $sql);
               //   if(!$ret) {
@@ -45,6 +45,7 @@
               // }
             }
         ?>
+
   	  </div>
 
       <!-- Botón de hamburguesa en móviles -->
@@ -62,13 +63,13 @@
       </div>
       <div id="sec2" class="tabcontent" style ="width: 100%; height:100%" >
           <?php include "login.php" ?>
-      </div>    
+      </div>     
       <div id="sec3" class="tabcontent" style ="width: 100%; height:100%" >
-          <?php include "config.php" ?>
+          <?php include "register.php" ?>
       </div>    
       <div id="sec4" class="tabcontent" style ="width: 100%; height:100%" >
-          <?php include "login.php" ?>
-      </div>    
+          <?php include "#" ?>
+      </div>     
     </div>
 
   <script type = "text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
