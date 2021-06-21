@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
         <link rel ="stylesheet" href="css/style.css"/>
         <link rel ="stylesheet" href="js/javascript.js"/>
-
+        <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
   <body>
   <div>&nbsp;
@@ -25,6 +25,7 @@
                 <input type="password" name="confirm_password" id="confirm_password" title= "Repite tu contrase&ntilde;a" placeholder="Repita su contrase&ntilde;a" minlength="8" required onkeyup='check();'><br><br>
                 Tel&eacute;fono:<br><br>
                 <input type="text" id="phone" title= "Ingresa tu n&uacute;mero de tel&eacute;fono" name="phone" placeholder="N&uacute;mero de tel&eacute;fono" minlength="10" maxlength="10" required><br><br>
+                <div class="g-recaptcha" data-sitekey="6Lf0Hb4aAAAAAE2SknNH38ubSp8sOKm3PPVdwgNw"></div>
                 <br>Estado: <span id = "message"></span><br>
                 <input type="submit" value="Registrarse" >
             </form>

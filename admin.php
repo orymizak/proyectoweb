@@ -43,7 +43,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         $ID = isset($_SESSION['ID']);
 
         if ($ID == 0) {
-        	echo 'ADVERTENCIA: ACCESO SOLO PARA ADMINISTRDORES (VER TIPO DE CUENTA)';
+        	echo 'ADVERTENCIA: ACCESO SOLO PARA ADMINISTRADORES (VER TIPO DE CUENTA)';
         }
         if ($ID == 1) {
             echo '
