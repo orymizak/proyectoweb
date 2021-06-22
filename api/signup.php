@@ -6,11 +6,11 @@
     // declaración de variables
     $username = $_POST['username'];
     $phone = $_POST['phone'];
-    $password = $_POST['password'];
+    //$password = $_POST['password'];
     $device = $_POST['device'];
     $response = $_POST["g-recaptcha-response"];
     // para encriptar
-    // $password = password_hash($password, PASSWORD_DEFAULT);
+    $password = password_hash($password, PASSWORD_DEFAULT);
 
     if(!empty($response)){
         $secret = "6Lf0Hb4aAAAAAMOWmoSn8Pgm5FBVnNExuvylN83n";
@@ -22,6 +22,8 @@
         //entrará aquí cuando todo sea correcto	
             // Realiza la consulta
                     $sql = "INSERT INTO users (type, username, password, phone, restricted) VALUES (0,'$username', '$password', '$phone', 0)";
+                    //$sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+
                     $query = $mysqli->query($sql);
             
                         // LOGIN PARA WEB

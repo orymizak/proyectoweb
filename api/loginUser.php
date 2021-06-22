@@ -17,7 +17,7 @@
             // LOGIN PARA WEB
             if (is_null($device)) {
 
-                if ($result->num_rows == 1) {
+                if ($result->num_rows == 1 && password_verify($password,$hash)) {
                     session_start();
                     $_SESSION['username'] = $username;
 
@@ -27,10 +27,9 @@
 
                     echo "<script type='text/javascript'> alert('Bienvenido.'); 
                     window.location.href='http://localhost/test.php';</script>";
-
                 }
 
-                if ($result->num_rows == 0) {
+                if ($result->num_rows == 0 && password_verify($password,$hash)) {
                     echo "<script type='text/javascript'> alert('La información ingresada no es correcta.'); 
                     window.location.href='http://localhost/test.php';</script>";
                 }
@@ -41,7 +40,7 @@
             if ($device == "1") {
                 $response = array();
 
-                if ($result->num_rows == 1) {
+                if ($result->num_rows == 1 && password_verify($password,$hash)) {
                     $response['status'] = 1;
                     $response['status_text'] = "Usted se ha conectado, bienvenido $username.";
                     $response['user_arr'] = $result->fetch_assoc();
@@ -50,7 +49,7 @@
                     $_SESSION['username'] = $username;
                 }
 
-                if ($result->num_rows == 0) {
+                if ($result->num_rows == 0 && password_verify($password,$hash)) {
                     $response['status'] = 0;
                     $response['status_text'] = "Error, la contraseña no es correcta $password, verifique.";
                 }
