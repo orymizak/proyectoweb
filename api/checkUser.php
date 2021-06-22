@@ -4,6 +4,7 @@
     require "connection.php";
 
     $username = $_POST['username'];
+    $device = $_POST['device'];
 
     $sql = "SELECT * FROM users WHERE username = '$username'";
     $result = $mysqli->query($sql);
@@ -20,7 +21,12 @@
         $response['status_text'] = "Se ha registrado el usuario con éxito. Se ha iniciado la sesión.";
     }
 
+    if (is_null($device)) {
+        echo $response['status'];
+        return;
+    }
+    
+        header('Content-Type: application/json');
+        echo json_encode($response);
     $mysqli->close();
-    header('Content-Type: application/json');
-    echo json_encode($response);
 ?>

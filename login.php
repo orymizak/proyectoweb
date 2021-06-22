@@ -31,7 +31,8 @@
                       <input type="password" REQUIRED id="password" title= "Ingresa tu contrase&ntilde;a" name="password" placeholder="password"><br><br>
                       <input type="submit" value="Conectarse" >
                       <a href="register.php" title="Registrar usuario"> <p>¿No tienes una cuenta? Reg&iacute;strate aqu&iacute;</p></a>
-                  </form>
+                      
+                </form>
             </div><br><br>
         </div>;';
       }
