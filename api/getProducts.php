@@ -8,8 +8,12 @@
     $query = $mysqli->query($sql);
 
     while($resultado = $query->fetch_assoc()) {
-        $datos[] = $resultado;
+        
+    	$resultado['urlmaker'] = "http://orymizak.ddns.net/images/".$resultado['ID'].".png";
+
+    	$datos[] = $resultado;
     }
 
     echo json_encode($datos);
+
 ?>
