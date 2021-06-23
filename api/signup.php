@@ -7,22 +7,19 @@
     // declaración de variables
     $username = $_POST['username'];
     $phone = $_POST['phone'];
-
-        // se descomentó esta línea porque sin esta línea no se obtiene la password de ningún lado ($_POST)
     $password = $_POST['password'];
 
     $device = $_POST['device'];
     $response = $_POST["g-recaptcha-response"];
 
     // para encriptar
-    // $password = password_hash($password, PASSWORD_DEFAULT);
+    $hash = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (type, username, password, phone, restricted) VALUES (0,'$username', '$password', '$phone', 0)";
+    $sql = "INSERT INTO users (type, username, password, phone, restricted) VALUES (0,'$username', '$hash', '$phone', 0)";
 
 
 // LOGIN PARA WEB
 if (is_null($device)){
-
 
     if(!empty($response)){
         $secret = "6Lf0Hb4aAAAAAMOWmoSn8Pgm5FBVnNExuvylN83n";
