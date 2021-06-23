@@ -33,8 +33,8 @@
           <h2>&Uacute;ltimas novedades</h2>
 
           <div class = "cont">
-              <?php 
-                $query = "SELECT * FROM products";
+
+<!--            $query = "SELECT * FROM products";
                 $resultado = $mysqli->query($query);
 
                 while($row = $resultado->fetch_assoc()) {
@@ -44,7 +44,7 @@
                     <img style = "width:10%" src="data:image;base64,'.base64_encode($row["image"]).'">
                     <p> '.$row['description'].'</h6>
                   </div>';
-                }?>
+ -->                
           </div>
 
         </div><br><br>

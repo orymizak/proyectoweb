@@ -1,32 +1,39 @@
 <?php
-    error_reporting(E_ERROR);
 
     require "connection.php";
 
-    $username = $_POST['username'];
+    error_reporting(E_ERROR);
+
+    $username = htmlentities(addslashes($_POST['username']));
     $device = $_POST['device'];
 
-    $sql = "SELECT * FROM users WHERE username = '$username'";
-    $result = $mysqli->query($sql);
+    $sql = "SELECT * FROM users WHERE username = :username";
+
+    $result = $mysqli->prepare($sql);
+    $result->execute(array(":username"=>$username));
+
     $response = array();
 
-    if ($result->num_rows == 1) {
-        $response['status'] = 1;
-        $response['status_text'] = "Error, el usuario ya existe.";
-        $response['user_arr'] = $result->fetch_assoc();
-    }
-    
-    if ($result->num_rows == 0) {
-        $response['status'] = 0;
-        $response['status_text'] = "Se ha registrado el usuario con éxito. Se ha iniciado la sesión.";
+    if ($device == "1") {
+            if ($result->rowCount() == 1)
+            {   
+                $response['status'] = 1;
+                $response['status_text'] = "Error: el usuario ya existe.";
+            }
+            else
+            {
+                $response['status'] = 0;
+                $response['status_text'] = "Usted se ha registrado correctamente.";
+            }
+
     }
 
     if (is_null($device)) {
-        echo $response['status'];
+        echo "<center>Este es el navegador web, aqu&iacute; no hay huevos de pascua 🤡";
         return;
     }
-    
-        header('Content-Type: application/json');
-        echo json_encode($response);
-    $mysqli->close();
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    $mysqli->connection = null;
 ?>

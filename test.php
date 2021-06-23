@@ -58,9 +58,11 @@
       <div id="sec0" style ="width: 100%; height:100%" class="tabcontent">
           <?php include "index.php" ?>
       </div>
+
       <div id="sec1" style ="width: 100%; height:100%" class="tabcontent">
           <?php include "products.php" ?>
       </div>
+
       <div id="sec2" class="tabcontent" style ="width: 100%; height:100%" >
           <?php include "login.php" ?>
       </div>     
