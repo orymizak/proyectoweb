@@ -32,6 +32,7 @@
                 <center><br>
                 <div class="g-recaptcha" data-sitekey="6Lf0Hb4aAAAAAE2SknNH38ubSp8sOKm3PPVdwgNw" required></div>
                 </center><br>
+                <input type="submit" value="Volver" onclick= "history.back();">
                 <input type="submit" value="Registrarse" >
             </form><br><br>
       </div><br><br>

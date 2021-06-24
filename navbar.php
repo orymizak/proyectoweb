@@ -26,7 +26,6 @@
           $username = isset($_SESSION['username']);
             if ($username == null || $username == '') {
               echo "Mi&nbsp;cuenta</a>";
-              echo '<a class = "link" title ="&iexcl;Reg&iacute;strate&excl;" href="register.php">Registrarse</a>';
             }
 
             else {
