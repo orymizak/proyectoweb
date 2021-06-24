@@ -4,9 +4,9 @@
 
     error_reporting(E_ERROR);
     
-    $device = $_POST['device'];
-    $username = htmlentities(addslashes($_POST['username']));
-    $password = htmlentities(addslashes($_POST['password']));
+    $device = isset($_POST['device']);
+    $username = htmlentities(addslashes(isset($_POST['username'])));
+    $password = htmlentities(addslashes(isset($_POST['password'])));
     
     $sql = "SELECT * FROM users WHERE username = :username";
 
@@ -27,35 +27,29 @@
                 window.location.href='http://localhost/index.php';</script>";
                 break;
             }
-            // if(!password_verify($password, $registro['password'])){
-                echo 'Contraseña incorrecta, reintente';
-                echo "<script type='text/javascript'>
-                window.location.href='http://localhost/login.php';</script>";
-                // break;
-            // }
+            echo "<script type='text/javascript'>alert('Contraseña incorrecta, reintente.');
+            window.location.href='http://localhost/login.php';</script>";
         }
     }
 
     //LOGIN PARA APP
     if ($device == "1") {
-
-        while($registro = $result->fetch(PDO::FETCH_ASSOC)){
-
+        while($registro = $result->fetch(PDO::FETCH_ASSOC)){    
             if(password_verify($password, $registro['password'])){
+
+                $response = $registro;
+
                 $response['status'] = 1;
                 $response['status_text'] = "Usted se ha conectado, bienvenido $username.";
 
-                $response['ID'] = $registro['ID'];
-                $response['username'] = $registro['username'];
-                $response['phone'] = $registro['phone'];
                 break;
             }
             $response['status'] = 0;
             $response['status_text'] = "Error, la contraseña no es correcta, verifique.";
         }
 
-        header('Content-Type: application/json');
-        echo json_encode($response);
+    header('Content-Type: application/json');
+    echo json_encode($response);
     }
 
     $mysqli->connection = null;
