@@ -1,6 +1,6 @@
 <?php
     //Encbezado CROS para que pueda hacerse la llamada
-	// header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Origin: *");
 		
     	require "database.php";
 

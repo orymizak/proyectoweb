@@ -1,16 +1,16 @@
 <?php
 
     require "connection.php";
+    $idUsuario = 195;
 
-    $sql = "SELECT ID, price, description, date, name, stock, rate FROM products";
-
+    $sql = "SELECT * FROM bag JOIN products ON bag.products_ID = products.ID";
     $result = $mysqli->prepare($sql);
     $result->execute();
 
     $query = $mysqli->query($sql);
-    
-    while($resultado = $result->fetch(PDO::FETCH_ASSOC)){
-        
+
+
+    while($resultado = $result->fetch(PDO::FETCH_ASSOC)) {
     	$resultado['urlmaker'] = "http://localhost/Proyecto/proyectoweb/images/".$resultado['ID'].".png";
     	$datos[] = $resultado;
     }

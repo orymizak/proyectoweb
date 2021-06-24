@@ -2,10 +2,10 @@
  class Conexion{
      public static function Conectar(){
 
-         define('servidor','orymizak.ddns.net');
+         define('servidor','localhost');
          define('nombre_bd','seyda_db');
-         define('usuario','seyda_admin');
-         define('password','seydamoda');
+         define('usuario','root');
+         define('password','');
 
         /*define('servidor','localhost:33065');
         define('nombre_bd','seydabd');
