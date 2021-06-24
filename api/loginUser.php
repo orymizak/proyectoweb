@@ -23,13 +23,14 @@
                 $_SESSION['username'] = $username;
                 $_SESSION['ID'] = $registro['ID'];
     
-                echo "<script type='text/javascript'>alert('Sesión iniciada.');
-                window.location.href='http://localhost/test.php';</script>";
+                echo "<script type='text/javascript'>
+                window.location.href='http://localhost/index.php';</script>";
                 break;
             }
             // if(!password_verify($password, $registro['password'])){
-                echo "<script type='text/javascript'>alert('Contraseña incorrecta.');
-                window.location.href='http://localhost/test.php';</script>";
+                echo 'Contraseña incorrecta, reintente';
+                echo "<script type='text/javascript'>
+                window.location.href='http://localhost/login.php';</script>";
                 // break;
             // }
         }

@@ -8,7 +8,6 @@
         <link rel ="stylesheet" href="css/style.css"/>
         <link rel ="stylesheet" href="js/javascript.js"/>
 
-  <?php include "api/connection.php" ?>
   </head>
   <body>
   <div>&nbsp;

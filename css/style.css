@@ -1,11 +1,19 @@
+#g-recaptcha-response {
+    display: block !important;
+    position: absolute;
+    margin: -78px 0 0 0 !important;
+    width: 302px !important;
+    height: 76px !important;
+    z-index: -999999;
+    opacity: 0;
+}
+
   body, html, h1{
       background-color: #ffe4cf;
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
   }
-
-
 
   html, h1
     {
@@ -28,13 +36,33 @@
       color: white;
       font-family:bahnschrift,garamond,serif;
       border: 3px solid #f1f1f1;
-      text-shadow: #00d9c0 .5px 1px;
+      text-shadow: 1px 1px 2px black;
       border-radius: 25px;
       width: 99%;
       margin-left:0.5%;
       padding: 20px;
       text-align: center;
       font-size:14px;
+      box-shadow: 0px 0px 15px white;
+    }
+
+    .bg-text-login {
+      background-color: rgba(95, 187, 151, 0.8);
+      color: white;
+      font-family:bahnschrift,garamond,serif;
+      border: 2px solid #f1f1f1;
+      text-shadow: 1px 1px 2px black;
+      border-radius: 25px;
+      width: 40%;
+      margin-left:0.5%;
+      padding: 0px 20px;
+      text-align: center;
+      font-size:14px;
+      box-shadow: 0px 0px 15px white;
+    }
+
+    a {
+      color: red;
     }
 
     .container .box .a {
@@ -78,11 +106,19 @@
       width:100%;
   }
 
-  a
+ a
   {
     text-decoration: none;
-    color:white;
+    color: white;
   }
+
+ .contentLink
+  {
+    text-decoration: none;
+    text-shadow: none;
+    color: #ff0066;
+  }
+
 
 @media screen and (min-width:901px) {
 
@@ -119,5 +155,10 @@
 
   .bg-text {
     margin-top: 50px;
+  }
+
+  .bg-text-login {
+    margin-top: 50px;
+    min-width: 90%;
   }
 }

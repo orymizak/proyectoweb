@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <HTML lang ="es">
   <head>
+    <?php include('navbar.php');?>
       <meta charset="utf-8">
       <title>Seyda || Tienda de Accesorios</title>
     	<!-- Meta-description: descripción de la página -->
@@ -25,10 +26,13 @@
   <!-- AQUÍ VA EL CONTENIDO -->
   <div>&nbsp;
       <div class ="bg-text">
+       <img src="https://logos.textgiraffe.com/logos/logo-name/Seyda-designstyle-smoothie-m.png" style ="width:20%; max-width:300px"/>
+
         <p style ="font-size:25px"><b>&iexcl;Bienvenido a Seyda&#33; El mejor sitio para comprar pulseras y accesorios personalizados.</b></p>
         <p style ="font-size:16px">Aqu&iacute; podr&aacute;s adquirir los mejores estilos de pulseras ideales para ti.</p>
         <br>
         <div class = "container" style ="text-align: left; margin-left:5px;"> 
+        <hr>
           <h2>&Uacute;ltimas novedades</h2>
 
           <div class = "test">
@@ -43,6 +47,7 @@
               </p>
             </aside>
           </div>
+
 
 
           <div class = "box">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <HTML lang ="es">
   <head>
+      <?php include('navbar.php');?>
       <meta charset="utf-8">
       <title>Seyda || Cat&aacute;logo</title>
     	<!-- Meta-description: descripción de la página -->

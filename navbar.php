@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <HTML>
+<?php include('api/connection.php');
+  session_start(); ?>
   <head>
     <meta name="viewport" content="width=device-width"><!-- , user-scalable=no -->
     <link rel ="stylesheet" href="css/style.css"/>
@@ -9,15 +11,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+
     <div class="topnav">
-      <a href="main.php" class="active" title ="Ir a inicio">
-        <p id="title">SEYDA</p>
-      </a>
+
+  	 	<a href="index.php" id = "title" class="active" title ="Ir a inicio">
+        SEYDA
+    	</a>
 
       <div id="myLinks">
         <a class = "link" title ="Ir al cat&aacute;logo" href="products.php">Productos</a>
-        <a class = "link" title ="M&aacute;s informaci&oacute;n acerca de nosotros" href="about-us.php">Nosotros</a>
-        <a class = "link" title ="&iexcl;Con&eacute;ctate&excl;" href="login.php">Login</a>
+        <a class = "link" title ="&iexcl;Con&eacute;ctate&excl;" href="login.php">
+
+		<?php
+          $username = isset($_SESSION['username']);
+            if ($username == null || $username == '') {
+              echo "Mi&nbsp;cuenta</a>";
+              echo '<a class = "link" title ="&iexcl;Reg&iacute;strate&excl;" href="register.php">Registrarse</a>';
+            }
+
+            else {
+              echo "Cuenta&nbsp;de&nbsp;".$_SESSION['username']."</a>";
+              echo '<a class = "link" title ="Mi bolsa" href ="cart.php">Mi&nbsp;bolsa</a>';
+              echo '<a class = "link-logout" title ="Salir" href ="api/logout.php">Cerrar&nbsp;sesi&oacute;n</a>';
+              // $sql ="SELECT * from users where username = '{$_SESSION['username']}'";
+              // $ret = mysqli_query($mysqli, $sql);
+              //   if(!$ret) {
+              //     // echo pg_last_error($mysqli);
+              //     exit;
+              //   }
+              // // // jala datos especificos del usuario
+              // while($row = mysqli_fetch_row($ret)) {
+              //   echo $row[2];
+              // }
+            }
+        ?>
+
+
         
       </div>
       <!-- Botón de hamburguesa en móviles -->
@@ -26,6 +55,10 @@
       </a>
     </div>
     
+
+
+
+
     <script type = "text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     
     <!-- Este permite la inserción y función de javascript en el navbar -->
