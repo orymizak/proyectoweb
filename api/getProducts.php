@@ -11,10 +11,10 @@
     
     while($resultado = $result->fetch(PDO::FETCH_ASSOC)){
         
-    	$resultado['urlmaker'] = "http://localhost/Proyecto/proyectoweb/images/".$resultado['ID'].".png";
-    	$datos[] = $resultado;
+        // $resultado['urlmaker'] = "http://localhost/Proyecto/proyectoweb/images/".$resultado['ID'].".png";
+        $resultado['urlmaker'] = "http://orymizak.ddns.net/images/".$resultado['ID'].".png";
+        $datos[] = $resultado;
     }
 
     echo json_encode($datos);
-
 ?>

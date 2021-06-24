@@ -4,9 +4,9 @@
 
     error_reporting(E_ERROR);
     
-    $device = isset($_POST['device']);
-    $username = htmlentities(addslashes(isset($_POST['username'])));
-    $password = htmlentities(addslashes(isset($_POST['password'])));
+    $device = $_POST['device'];
+    $username = htmlentities(addslashes($_POST['username']));
+    $password = htmlentities(addslashes($_POST['password']));
     
     $sql = "SELECT * FROM users WHERE username = :username";
 

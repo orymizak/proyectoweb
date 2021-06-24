@@ -9,7 +9,6 @@
 
     $query = $mysqli->query($sql);
 
-
     while($resultado = $result->fetch(PDO::FETCH_ASSOC)) {
     	$resultado['urlmaker'] = "http://localhost/Proyecto/proyectoweb/images/".$resultado['ID'].".png";
     	$datos[] = $resultado;
