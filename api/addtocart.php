@@ -64,7 +64,7 @@
             }
             else
             {
-                print_r("No existe este producto");
+                echo json_encode("no existe el producto");
             }
         }
     }   
