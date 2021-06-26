@@ -1,9 +1,9 @@
 <?php
 
     require "connection.php";
-    $idUsuario = 195;
+    $userID = 195;
 
-    $sql = "SELECT * FROM bag JOIN products ON bag.products_ID = products.ID";
+    $sql = "SELECT * FROM bag JOIN products ON bag.products_ID = products.ID WHERE user_ID = '$userID'";
     $result = $mysqli->prepare($sql);
     $result->execute();
 

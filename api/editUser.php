@@ -1,19 +1,13 @@
 <?php
 
     require "connection.php";
-
-    $idUsuario = $_POST['idUsuario'];
-    $nombre = $_POST['nombre'];
-    $telefono = $_POST['telefono'];
-    $email = $_POST['email'];
+    $userID = htmlentities(addslashes($_POST['userID']));
+    $password = $_POST['password'];
+    $password = password_hash($password, PASSWORD_DEFAULT);
+    $phone = htmlentities(addslashes($_POST['phone']));
     
-    /*$idUsuario = "27";
-    $nombre = "sergio";
-    $telefono = "123456";
-    $email = "sergio";*/
 
-    $sql = "UPDATE usuarios SET nombre='$nombre', telefono='$telefono', email='$email' WHERE idUsuario='$idUsuario'";
-    
+    $sql = "UPDATE usuarios SET ID='$userID', phone='$phone', password ='$password' WHERE idUsuario='$idUsuario'";
     $query = $mysqli->query($sql);
 
 ?>

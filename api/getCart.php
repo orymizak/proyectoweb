@@ -6,7 +6,8 @@
     // $userID = 214;
     $userID = $_POST['userID'];
 
-    $sql = "SELECT * FROM bag WHERE user_ID = '$userID'";
+    $sql = "SELECT * FROM bag JOIN products ON bag.products_ID = products.ID WHERE user_ID = '$userID'";
+    //"SELECT * FROM bag JOIN products ON bag.products_ID = products.ID"
 
     
     $result = $mysqli->prepare($sql);
