@@ -1,10 +1,17 @@
 <?php
-
-	// este no será del todo necesario 
     require "connection.php";
+    //$idBag = 4;
+    //$idBag = htmlentities(addslashes($idBag));
+    $idBag = htmlentities(addslashes($_POST['ID']));
+
+    $sql = "DELETE FROM bag WHERE ID = :idItem";
+    $result = $mysqli->prepare($sql);
+    $result->execute(array(":idItem"=>$idBag));
+
+    $response = array();
+
+    $response['status_text'] = "Usted se ha registrado correctamente.";
     
-    $idItem = $_POST['id'];
-    $sql = "DELETE FROM bag WHERE user_ID = 'idItem'";
-    $query = $mysqli->query($sql);
+    echo json_encode($response);
     
 ?>
