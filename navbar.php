@@ -14,8 +14,8 @@
 
     <div class="topnav">
 
-  	 	<a href="index.php" id = "title" class="active" title ="Ir a inicio">
-        SEYDA
+  	 	<a href="index.php" class="active" title ="Ir a inicio">
+        <img style = "padding: 0px;height:40px" src="src/seyda.png"/>
     	</a>
 
       <div id="myLinks">
@@ -45,7 +45,7 @@
             }
         ?>
 
-
+        <a class = "linkBack" title ="Volver" href="#"></a>
         
       </div>
       <!-- Botón de hamburguesa en móviles -->

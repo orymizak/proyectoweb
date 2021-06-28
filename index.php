@@ -1,106 +1,132 @@
 <!DOCTYPE html>
 <HTML lang ="es">
+
   <head>
     <?php include('navbar.php');?>
       <meta charset="utf-8">
       <title>Seyda || Tienda de Accesorios</title>
-    	<!-- Meta-description: descripción de la página -->
     	<meta name="description" content="Tienda de pulseras y otros accesorios">
       <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
-    	<!-- Meta-viewport: forza el contenido de la página para evitar el acercamiento en celular -->
-    	<!-- Insersión del archivo style.css y javascript.js -->
     	<link rel ="stylesheet" href="css/style.css"/>
     	<link rel ="stylesheet" href="js/javascript.js"/>
-  	<!-- Para incluir una página en otra se usa la siguiente función fuera del body -->
-  	<!-- Esto es útil para incluir la conexión de la base de datos en las páginas como la configuración de usuarios, login, etc., e incluso para incluir la barra de navegación. -->
   </head>
-  <body style = "background-color: 
 
-    background-color: #ffe4cf;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  ">
-  <!-- Ejemplo de acentos -->
-  <!-- a = &aacute; ñ = &ntilde; ? = &quest; ¿ = &iquest; ! = &excl; ¡ = &iexcl; % = &percnt; -->
-  <!-- AQUÍ VA EL CONTENIDO -->
-  <div>&nbsp;
-      <div class ="bg-text">
-       <img src="https://logos.textgiraffe.com/logos/logo-name/Seyda-designstyle-smoothie-m.png" style ="width:20%; max-width:300px"/>
+<body>
+  <center>
+<div>&nbsp;
+  <div class ="bg-text">
+    <div class = "mainContent">
 
-        <p style ="font-size:25px"><b>&iexcl;Bienvenido a Seyda&#33; El mejor sitio para comprar pulseras y accesorios personalizados.</b></p>
-        <p style ="font-size:16px">Aqu&iacute; podr&aacute;s adquirir los mejores estilos de pulseras ideales para ti.</p>
-        <br>
-        <div class = "container" style ="text-align: left; margin-left:5px;"> 
-        <hr>
-          <h2>&Uacute;ltimas novedades</h2>
+      <header class = "title">
+        <h1>Bienvenido a</h1>
+        <img src="src/seyda.png"/>
+      </header>
 
-          <div class = "test">
-            <section class = "test-box1">
+      <p>
+        &iexcl;La mejor tienda de pulseras en l&iacute;nea&excl;
+      </p>
+
+      <header><hr><br>
+        <h2>&Uacute;ltimas novedades</h2>
+      </header>
+
+      <section class = "main">
+        <div class = "imgCont">
+          <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
+        </div>
+          <p>
+            <p>Fecha</p>
+              Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
+              parturient potenti condimentum lacinia fringilla donec libero ultrices, 
+              penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
+              At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
+              integer aptent bibendum nibh imperdiet pellentesque taciti, 
+              sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
+              dui ad mus pulvinar, torquent suscipit enim.
+          </p>
+        </section>
+
+        <section class = "main">
+          <div class = "imgCont">
+            <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
+          </div>
             <p>
-              Texto
+              <p>Fecha</p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
+                parturient potenti condimentum lacinia fringilla donec libero ultrices, 
+                penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
+                At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
+                integer aptent bibendum nibh imperdiet pellentesque taciti, 
+                sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
+                dui ad mus pulvinar, torquent suscipit enim.
             </p>
-            </section>
-            <aside>
+          </section>
+
+          <section class = "main">
+            <div class = "imgCont">
+              <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
+            </div>
               <p>
-                Texto
+                <p>Fecha</p>
+
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
+                  parturient potenti condimentum lacinia fringilla donec libero ultrices, 
+                  penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
+                  At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
+                  integer aptent bibendum nibh imperdiet pellentesque taciti, 
+                  sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
+                  dui ad mus pulvinar, torquent suscipit enim.
+
               </p>
-            </aside>
-          </div>
+            </section>
 
+          <section class = "main">
+            <div class = "imgCont">
+              <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
+            </div>
+              <p>
+                <p>Fecha</p>
 
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
+                  parturient potenti condimentum lacinia fringilla donec libero ultrices, 
+                  penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
+                  At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
+                  integer aptent bibendum nibh imperdiet pellentesque taciti, 
+                  sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
+                  dui ad mus pulvinar, torquent suscipit enim.
 
-          <div class = "box">
-              <a href="">
-                <div class="box-row">
-                  <div class="box-cell box1">
-                    <img src="src/agatha.jpg" class ="index-img" title="pulseras para pareja" alt="pulseras para pareja agatha">
-                  </div>
-                  <div class="box-cell box2">
-                    <p>Agatha y Bola Blanca</p> 
-                    <p>Par de pulseras tejidas con hilo grueso y piedra Agatha y bola blanca al centro.</p>
-                  </div>
-                  <div class="box-cell2 box3">
-                  </div>
-                </div>
-              </a>
-              &nbsp;
+              </p>
+            </section>
 
-              <a href="">
-                <div class="box-row">
-                  <div class="box-cell box1">
-                    <img src="src/universo.jpg" class = "index-img" title="pulsera universo" alt="pulsera universo">
-                  </div>
-                  <div class="box-cell box2">
-                    <p>Pulsera Universo</p>
-                    <p>Pulsera de piedras naturales con separadores en chapa de oro 24k.<br></p>
-                  </div>
-                  <div class="box-cell2 box3">
-                  </div>
-                </div>
-              </a>
-              &nbsp;
-
-              <a href="">
-                <div class="box-row">
-                  <div class="box-cell box1">
-                    <img src="src/tobillera.jpg" class = "index-img" title="tobillera pucca" alt="tobillera pucca">
-                  </div>
-                  <div class="box-cell box2">
-                    <p>Tobillera Pucca</p>
-                    <p>Tobillera de hilo rodeada de Pucca de colores y cuarzo cristalizado.</p>
-                  </div>
-                  <div class="box-cell2 box3">
-                  </div>
-                </div>
-              </a>
-
-          </div>
-
-        </div><br><br>
-        <a href = "">Ir al cat&aacute;logo</a><br><br>
-      </div><br><br>
-  </div>
-    <!-- FIN DE CONTENIDO -->
-  </body>
+            
+    </div>
+    <br>
+    <br>
+    
+    <a href = "products.php">
+      <section class = "seeMore">
+        Ver m&aacute;s...
+      </section><br>
+      </a>
+    <hr>
+      <div class = "socialIcons">
+        <a href ="https://www.facebook.com/"><img title = "&iexcl;Ir a Facebook&excl;" src ="src/ico_facebook.png"></a>
+        <a href ="https://www.twitter.com/"><img title = "&iexcl;Ir a Twitter&excl;" src ="src/ico_twitter.png"></a>
+        <a href ="https://www.instagram.com/"><img title = "&iexcl;Ir a Instagram&excl;" src ="src/ico_instagram.png"></a>
+      </div>
+  </div><br>
+    
+      <div class = "footer">
+        <div class ="footCont">
+          <p>
+            Derechos de autor por Seyda Moda. Todos los derechos reservados ®.</p>
+          <p>
+          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Acerca de Seyda Moda</a> | 
+          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Acuerdo del Servicio</a> | 
+          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Pol&iacute;tica de Privacidad</a></p>
+        </div>
+      </div><br>
+</div> 
+  </center>
+</body>
 </html>

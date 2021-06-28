@@ -1,164 +1,185 @@
-#g-recaptcha-response {
-    display: block !important;
-    position: absolute;
-    margin: -78px 0 0 0 !important;
-    width: 302px !important;
-    height: 76px !important;
-    z-index: -999999;
-    opacity: 0;
-}
+	#g-recaptcha-response {
+	    display: block !important;
+	    position: absolute;
+	    margin: -78px 0 0 0 !important;
+	    width: 302px !important;
+	    height: 76px !important;
+	    z-index: -999999;
+	    opacity: 0;
+	}
 
-  body, html, h1{
-      background-color: #ffe4cf;
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-  }
+	  * {
+		  font-family:bahnschrift,garamond,serif;
+	  }
 
-  html, h1
-    {
-      zoom: 100%;
-      height:100%;
-    }
+	  body{
+	      /*background-color: #ffe4cf;*/
+	      background-image: url("../src/bg.png");
+	      background-size:400px;
+	      background-repeat: repeat;
+	  }
 
-    * {
-      box-sizing: border-box;
-    }
+	  .title {
+	  	margin: 20px;
+	  	text-align: center;
+	  }
 
-    ._link {
-      text-decoration:none;
-      color: white;
-      font-weight: bold;
-    }
+	  header h1 {
+	  	color: #fff;
+	  	margin-bottom: 10px;
+	  }
 
-    .bg-text {
-      background-color: rgba(95, 187, 151, 0.8);
-      color: white;
-      font-family:bahnschrift,garamond,serif;
-      border: 3px solid #f1f1f1;
-      text-shadow: 1px 1px 2px black;
-      border-radius: 25px;
-      width: 99%;
-      margin-left:0.5%;
-      padding: 20px;
-      text-align: center;
-      font-size:14px;
-      box-shadow: 0px 0px 15px white;
-    }
+	  header h2 {
+	  	text-align: left;
+	  	margin-bottom: 50px;
+	  }
 
-    .bg-text-login {
-      background-color: rgba(95, 187, 151, 0.8);
-      color: white;
-      font-family:bahnschrift,garamond,serif;
-      border: 2px solid #f1f1f1;
-      text-shadow: 1px 1px 2px black;
-      border-radius: 25px;
-      width: 40%;
-      margin-left:0.5%;
-      padding: 0px 20px;
-      text-align: center;
-      font-size:14px;
-      box-shadow: 0px 0px 15px white;
-    }
+	  .socialIcons img {
+	  	padding:20px 40px 5px 40px;
+	  	width: 35px;
+	  }
 
-    a {
-      color: red;
-    }
+	  .seeMore {
+	    text-shadow: none;
+	  	width:150px;
+	  	color:black;
+	  	border-radius: 10px;
+	  	background: #EFFFEF;
+	  	padding:20px;
+	  	box-sizing:border-box;
+	  }
 
-    .container .box .a {
-      display:table;
-  }
-    .index-img {
-      border: 1px solid black;
-      width: 100%;
-      min-width:100px;
-      height: auto;
-    }
+	  .main {
+	    text-shadow: none;
+	    text-align: left;
+	  	width:48%;
+	  	margin: 1%;
+	  	color:black;
+	  	border-radius: 25px;
+	  	background: #EFFFEF;
+	  	padding:20px;
+	  	float:left;	
+	  	box-sizing:border-box;
+	  }
 
+	  	.imgCont {
+	  		padding:50px;
+	  	}
 
-  .box-row{
-    width: 100%;
-    border-radius: 10px;
-    background: rgba(132, 220, 198, 0.6);
-  }
+	  	.imgContent {
+	  		width:100%;
+	  		border: 2px solid black;
+	  		min-width:200px;
+	  		box-sizing:border-box;
+	  	}
 
-  .container .box .a .box-row {
-      display:table-row;
-  }
+	  	.footer {
+	      	background-color: rgba(95, 187, 151, 1);
+	        box-shadow: 0px 0px 15px white;
+	  		max-width: 550px;
+	  		border-radius: 15px;
+	      	box-sizing:border-box;
+		}
 
-  .container .box .box-cell {
-      display:table-cell;
-      padding:15px;
-  }
+	  	.footCont{
+	  		padding:1px 5px 1px 5px;
+	  		height: 80px;
+	  		font-family: Bahnschrift;
+	  		color: white;
+	  		text-align: middle;
+	  		text-shadow: 1px 1px 1px black;
+	  	}
 
-  .container .box .box-cell.box1 {
-      color:white;
-      width:20%;
-    }
+	  	.footerContent {
+	  		font-family: Bahnschrift;
+	  		font-weight: bold;
+	  		padding: 10px;
+	  		text-align: center;
+	  	}
+	  	
+	    .mainContent {
+	    	width: 100%;
+	    	max-width: 1000px;
+	    	margin: 0 auto;
+	    	overflow:hidden;
+	    }
 
-  .container .box .box-cell.box2 {
-      vertical-align:middle;
-      width:100%;
-  }
-  .box-cell2.box3 {
-      display:table-cell;
-      vertical-align:middle;
-      width:100%;
-  }
+	    .bg-text {
+		  background-color: rgba(95, 187, 151, 0.85);
+	      color: white;
+	      border: 3px solid #f1f1f1;
+	      text-shadow: 1px 1px 2px black;
+	   	  border-radius: 25px;
+	        box-shadow: 0px 0px 15px white;
+		    max-width: 1000px;
+		    width: 90%;
+	    	overflow:hidden;
+	   	  padding: 20px;
+	    }
 
- a
-  {
-    text-decoration: none;
-    color: white;
-  }
+	    .bg-text-login {
+	      background-color: rgba(95, 187, 151, 0.8);
+	      color: white;
+	      font-family:bahnschrift,garamond,serif;
+	      border: 2px solid #f1f1f1;
+	      text-shadow: 1px 1px 2px black;
+	      border-radius: 25px;
+	      width: 50%;
+	      min-width:350px;
+	      max-width:500px;
+	      padding: 0px 20px;
+	      text-align: center;
+	      font-size:14px;
+	      box-shadow: 0px 0px 15px white;
+	    }
 
- .contentLink
-  {
-    text-decoration: none;
-    text-shadow: none;
-    color: #ff0066;
-  }
+	    a {
+	      color: red;
+	    }
 
-
-@media screen and (min-width:901px) {
-
-  .test {
-    width:700px;
-    background: #fff;
-    padding: 20px;
-    float:left;
-    box-sizing:border-box;
-  }
-
-  aside {
-    width: 30%;
-    padding: 20px;
-    box-sizing: border-box;
-    background: #ccc;
-    float:left;
-  }
-
-  .test-box {
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
-    /*background-color: red;*/
-  }
-
-}
-
+	    .container .box .a {
+	      display:table;
+	  }
+	    .index-img {
+	      border: 1px solid black;
+	      width: 100%;
+	      min-width:100px;
+	      height: auto;
+	    }
 
 
+	  .box-row{
+	    width: 100%;
+	    border-radius: 10px;
+	    background: rgba(132, 220, 198, 0.6);
+	  }
+
+	 a
+	  {
+	    text-decoration: none;
+	    color: white;
+	  }
+
+	 .contentLink
+	  {
+	    text-decoration: none;
+	    text-shadow: none;
+	    color: #ff0066;
+	  }
 
 @media screen and (max-width:900px) {
 
-  .bg-text {
-    margin-top: 50px;
-  }
+	.imgCont {
+		padding:80px;
+	}
 
-  .bg-text-login {
-    margin-top: 50px;
-    min-width: 90%;
-  }
+	.imgContent {
+		height: auto;
+		box-sizing:border-box;
+	}
+
+	.main {
+		width:98%;
+	}
+
 }

@@ -32,11 +32,9 @@
 
   .topnav a {
       font-weight: bold;
-      padding: 12px 25px;
       text-decoration: none;
       display: block;
       font-size: 20px;
-      height:50px;
       text-align: center;
   }
 
@@ -48,9 +46,6 @@
       display: none;
   }
 
-  .icon {
-      background: #f6828c;
-  }
 
   .icon:hover, 
   .link:hover,
@@ -61,20 +56,13 @@
   }
 
   .active {
-      width: 100px;
+      padding: 6px 40px 0px 40px;
+      height: 48px;
+      width: 0px;
       color: #ffe4cf;
+      box-sizing: border-box;
   }
 
-  #title {
-      font-size: 20px;
-      color: white;
-      font-weight: bold;
-      letter-spacing: 5px;
-      font-family: 'Playfair Display', serif;
-      margin-top: -1px;
-      margin-left: 15px;
-      font-style: bold;
-  }
 /*COMPUTADORA*/
 @media screen and (min-width:811px) {
 
@@ -87,11 +75,10 @@
       background-color 1s,
       background-position 1s, 
       color 0s;
+      padding: 12px 20px 12px 20px;
   }
 
   .link:hover, .link-logout:hover {
-      padding-left: 25px;
-      padding-right: 25px;
       background-size: 100% 200%;
       box-shadow: inset -2px 2px 0 0 #ffffff, inset 2px 1px 0 0 #ffffff;
       border-radius: 15px 15px 0px 0px;
@@ -100,6 +87,7 @@
     }
 
   .link:hover {
+
       background-image: linear-gradient(to bottom, #f6828c 50%, #ffe4cf 0%);
       background-color: #F0D7C4;
       border-bottom: rgba(0,0,0,0) 2px;
@@ -117,10 +105,10 @@
   }
 
   .topnav #myLinks{
-      top: 1px;
+      top: 0;
   }
+
   .link-logout {
-      
       position:absolute;
       right: 0;
       top: 0;
@@ -130,13 +118,14 @@
 /*CELULAR*/
 @media screen and (max-width:810px) {
 
+
   .active {
       width: 100%;
   }
 
   .topnav {
-      overflow: hidden;
       background-color: rgb(95,187,151);
+      overflow: hidden;
       position:fixed;
       width:100%;
   }
@@ -147,17 +136,13 @@
       width: 100%;
   }
 
-  .topnav a {
-      height:50px;
-  }
-
-  #title {
-      margin-top: 0px;
-      background-color: #f6828c;
-  }
-
   #myLinks {
-      margin-top: 0px;
+      background-color: #7FC2A1;
+      border-top:solid 2px white;
+  }
+
+  .link, .link-logout {
+      padding: 20px 0px 20px 0px;
   }
 
   .topnav a.icon {
@@ -171,7 +156,21 @@
       color: white;
   }
 
+  .topnav {
+    background-color:#f6828c;
+  }
+
   .icon:active, .link:active {
       color: #247ba0;
+  }
+
+  .icon {
+    padding:12px 10px;
+      width:30px;
+      height:24px;
+  }
+  
+  .bg-text, .bg-text-login {
+    margin-top:50px;
   }
 }

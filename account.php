@@ -10,6 +10,7 @@
 
   </head>
   <body>
+
   <div>&nbsp;
       <div class ="bg-text">
         <p style ="font-size:25px"><b>Mi cuenta</b></p>
@@ -19,6 +20,7 @@
             Datos del usuario
       </div><br><br>
   </div>
+  
     <!-- FIN DE CONTENIDO -->
   </body>
 </html>
