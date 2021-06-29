@@ -1,5 +1,21 @@
 /* Global CSS */
 
+.float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#f6828c;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
   body {
       margin: 0px;
       font-family:bahnschrift,garamond,serif;
@@ -119,12 +135,24 @@
 @media screen and (max-width:810px) {
 
 
+  .linkBack{
+    background-color: rgba(0,0,0,0.5);
+    height: 1000px;
+    border-top: 2px solid white;
+    cursor:default;
+  }
+
+  .title {
+    background-color: rgba(0,0,0,0);
+  }
+
   .active {
       width: 100%;
+    background-color:#f6828c;
   }
 
   .topnav {
-      background-color: rgb(95,187,151);
+    background-color: rgba(0,0,0,0);
       overflow: hidden;
       position:fixed;
       width:100%;
@@ -137,12 +165,12 @@
   }
 
   #myLinks {
-      background-color: #7FC2A1;
       border-top:solid 2px white;
   }
 
   .link, .link-logout {
       padding: 20px 0px 20px 0px;
+      background-color: #7FC2A1;
   }
 
   .topnav a.icon {
@@ -154,10 +182,6 @@
 
   .icon:hover {
       color: white;
-  }
-
-  .topnav {
-    background-color:#f6828c;
   }
 
   .icon:active, .link:active {
@@ -173,4 +197,6 @@
   .bg-text, .bg-text-login {
     margin-top:50px;
   }
+
+
 }

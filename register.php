@@ -13,8 +13,8 @@
   <body>
   <div>&nbsp;
     <center>
-      <div class ="bg-text-login">
-        <div style ="font-size:25px; padding-top:20px"><b>Registrarse</b></div>
+      <div class ="bg-text">
+        <h1>Registrarse</h1>
                       <img src="https://logos.textgiraffe.com/logos/logo-name/Seyda-designstyle-smoothie-m.png" style ="width:20%; max-width:100px"/>
             <div>
             </div>
@@ -32,7 +32,7 @@
                 <center><br>
                 <div class="g-recaptcha" data-sitekey="6Lf0Hb4aAAAAAE2SknNH38ubSp8sOKm3PPVdwgNw" required></div>
                 </center><br>
-                <input type="submit" value="Volver" onclick= "history.back();">
+                <input type="button" value="Volver" onclick= "history.back();">
                 <input type="submit" value="Registrarse" >
             </form><br><br>
       </div><br><br>

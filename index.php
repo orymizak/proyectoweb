@@ -13,120 +13,82 @@
 
 <body>
   <center>
-<div>&nbsp;
-  <div class ="bg-text">
-    <div class = "mainContent">
+	<div>&nbsp;
+	  <div class ="bg-text">
+	    <div class = "mainContent">
 
-      <header class = "title">
-        <h1>Bienvenido a</h1>
-        <img src="src/seyda.png"/>
-      </header>
+	      <header class = "title">
+	        <h1>Bienvenido a</h1>
+	        <img src="src/seyda.png"/>
+	      </header>
 
-      <p>
-        &iexcl;La mejor tienda de pulseras en l&iacute;nea&excl;
-      </p>
+	      <p>
+	        &iexcl;La mejor tienda de pulseras en l&iacute;nea&excl;
+	      </p>
 
-      <header><hr><br>
-        <h2>&Uacute;ltimas novedades</h2>
-      </header>
+	      <header><hr><br>
+	        <h2>&Uacute;ltimas novedades</h2>
+	      </header>
 
-      <section class = "main">
-        <div class = "imgCont">
-          <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
-        </div>
-          <p>
-            <p>Fecha</p>
-              Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
-              parturient potenti condimentum lacinia fringilla donec libero ultrices, 
-              penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
-              At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
-              integer aptent bibendum nibh imperdiet pellentesque taciti, 
-              sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
-              dui ad mus pulvinar, torquent suscipit enim.
-          </p>
-        </section>
 
-        <section class = "main">
-          <div class = "imgCont">
-            <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
-          </div>
-            <p>
-              <p>Fecha</p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
-                parturient potenti condimentum lacinia fringilla donec libero ultrices, 
-                penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
-                At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
-                integer aptent bibendum nibh imperdiet pellentesque taciti, 
-                sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
-                dui ad mus pulvinar, torquent suscipit enim.
-            </p>
-          </section>
+<?php
+  $sql = "SELECT * FROM products ORDER BY date DESC LIMIT 3";
+  $result = $mysqli->prepare($sql);
+  $result->execute();
 
+  while($row = $result->fetch(PDO::FETCH_ASSOC)){
+
+    echo '
           <section class = "main">
-            <div class = "imgCont">
-              <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
-            </div>
-              <p>
-                <p>Fecha</p>
+            <form method = "POST" action = "view.php">
+            <input hidden name = "product_ID" value = "'.$row['ID'].'">
+	              <div class = "imgCont">
+	                <center>
+                  <input type = "image" class = "imgContent" src = "../images/'.$row['ID'].'.jpg"/>
+	                </center>
+	              </div>
 
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
-                  parturient potenti condimentum lacinia fringilla donec libero ultrices, 
-                  penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
-                  At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
-                  integer aptent bibendum nibh imperdiet pellentesque taciti, 
-                  sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
-                  dui ad mus pulvinar, torquent suscipit enim.
+	              <div class = "txtCont">
+	                <h3 class = "textTitle">
+	                  '.$row['name'].'
+	                </h3>
+	              </div>
 
-              </p>
-            </section>
-
-          <section class = "main">
-            <div class = "imgCont">
-              <img class = "imgContent" src = "http://lorempixel.com/1200/200/" alt ="">
-            </div>
-              <p>
-                <p>Fecha</p>
-
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit tellus, 
-                  parturient potenti condimentum lacinia fringilla donec libero ultrices, 
-                  penatibus vestibulum mattis rutrum morbi ridiculus aliquet. 
-                  At habitant praesent sollicitudin tortor montes fermentum iaculis consequat, 
-                  integer aptent bibendum nibh imperdiet pellentesque taciti, 
-                  sociis primis aliquam lacinia pulvinar auctor enim. Nulla ut maecenas himenaeos eget,
-                  dui ad mus pulvinar, torquent suscipit enim.
-
-              </p>
-            </section>
-
-            
-    </div>
-    <br>
-    <br>
-    
-    <a href = "products.php">
-      <section class = "seeMore">
-        Ver m&aacute;s...
-      </section><br>
-      </a>
-    <hr>
-      <div class = "socialIcons">
-        <a href ="https://www.facebook.com/"><img title = "&iexcl;Ir a Facebook&excl;" src ="src/ico_facebook.png"></a>
-        <a href ="https://www.twitter.com/"><img title = "&iexcl;Ir a Twitter&excl;" src ="src/ico_twitter.png"></a>
-        <a href ="https://www.instagram.com/"><img title = "&iexcl;Ir a Instagram&excl;" src ="src/ico_instagram.png"></a>
-      </div>
-  </div><br>
-    
-      <div class = "footer">
-        <div class ="footCont">
-          <p>
-            Derechos de autor por Seyda Moda. Todos los derechos reservados ®.</p>
-          <p>
-          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Acerca de Seyda Moda</a> | 
-          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Acuerdo del Servicio</a> | 
-          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Pol&iacute;tica de Privacidad</a></p>
-        </div>
-      </div><br>
-</div> 
+	              <p class = "textMain">
+	                $'.$row['price'].' MXN
+	              </p>
+            </form>
+          </section>';
+      }
+?>        
+	    </div>
+	    <br>
+	    <br>
+	    
+	    <a href = "products.php">
+	      <section class = "seeMore">
+	        Ver m&aacute;s...
+	      </section><br>
+	      </a>
+	    <hr>
+	      <div class = "socialIcons">
+	        <a href ="https://www.facebook.com/"><img title = "&iexcl;Ir a Facebook&excl;" src ="src/ico_facebook.png"></a>
+	        <a href ="https://www.twitter.com/"><img title = "&iexcl;Ir a Twitter&excl;" src ="src/ico_twitter.png"></a>
+	        <a href ="https://www.instagram.com/"><img title = "&iexcl;Ir a Instagram&excl;" src ="src/ico_instagram.png"></a>
+	      </div>
+	  </div><br>
+	    
+	      <div class = "footer">
+	        <div class ="footCont">
+	          <p>
+	            Derechos de autor por Seyda Moda. Todos los derechos reservados ®.</p>
+	          <p>
+	          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Acerca de Seyda Moda</a> | 
+	          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Acuerdo del Servicio</a> | 
+	          <a href ="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Pol&iacute;tica de Privacidad</a></p>
+	        </div>
+	      </div><br>
+	</div> 
   </center>
 </body>
 </html>

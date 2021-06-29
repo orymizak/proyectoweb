@@ -8,7 +8,7 @@
     $username = htmlentities(addslashes($_POST['username']));
     $password = htmlentities(addslashes($_POST['password']));
     
-    $sql = "SELECT * FROM users WHERE username = :username";
+    $sql = "SELECT * FROM users WHERE (username = :username OR phone = :username)";
 
     $result = $mysqli->prepare($sql);
     $result->execute(array(":username"=>$username));
@@ -18,17 +18,31 @@
 
         while($registro = $result->fetch(PDO::FETCH_ASSOC)){
             if(password_verify($password, $registro['password'])){
-                session_start();
 
-                $_SESSION['username'] = $username;
-                $_SESSION['ID'] = $registro['ID'];
-    
-                echo "<script type='text/javascript'>
-                window.location.href='http://localhost/index.php';</script>";
+                $isBanned = $registro['restricted'];
+                if ($isBanned == 1)
+                {
+                    echo "<script type='text/javascript'>alert('El usuario está bloqueado')
+                    window.location.href='../index.php';</script>";
+                }
+                if ($isBanned == 0)
+                {
+
+                    session_start();
+                    $_SESSION['username'] = $registro['username'];
+                    $_SESSION['ID'] = $registro['ID'];
+                    $_SESSION['type'] = $registro['type'];
+        
+                    echo "<script type='text/javascript'>
+                    window.location.href='../index.php';</script>";
+
+                }
+
+
                 break;
             }
             echo "<script type='text/javascript'>alert('Contraseña incorrecta, reintente.');
-            window.location.href='http://localhost/login.php';</script>";
+            window.location.href='../login.php';</script>";
         }
     }
 

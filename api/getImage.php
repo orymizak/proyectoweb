@@ -19,4 +19,4 @@
  echo json_encode(array("result"=>$result));
 
  mysqli_close($mysqli);
- 
+?> 

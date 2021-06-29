@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <HTML>
 <?php include('api/connection.php');
+  error_reporting(E_ERROR);
   session_start(); ?>
   <head>
     <meta name="viewport" content="width=device-width"><!-- , user-scalable=no -->
@@ -24,6 +25,9 @@
 
 		<?php
           $username = isset($_SESSION['username']);
+
+          $isAdmin = $_SESSION['type'];
+
             if ($username == null || $username == '') {
               echo "Mi&nbsp;cuenta</a>";
             }
@@ -43,9 +47,13 @@
               //   echo $row[2];
               // }
             }
+            if ($isAdmin == 1) {
+              echo '<a class = "link" title ="Panel&nbsp;de&nbsp;Administraci&oacute;n" href ="admin.php">ADMIN</a>';
+            }
+
         ?>
 
-        <a class = "linkBack" title ="Volver" href="#"></a>
+        <a class = "linkBack" onclick = "myFunction()"></a>
         
       </div>
       <!-- Botón de hamburguesa en móviles -->
@@ -54,9 +62,16 @@
       </a>
     </div>
     
-
-
-
+<?php if ($username == null || $username == '') {
+	}
+	else
+	{
+	echo '
+	  <a href="cart.php" class="float">
+	    <i class="fa fa-shopping-cart my-float"></i>
+	  </a>';
+	}
+?>
 
     <script type = "text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     

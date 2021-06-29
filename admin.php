@@ -51,6 +51,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
+                        <button id="btnNuevo" type="button" onclick = "window.history.back()" class="btn btn-danger">Volver</button>
                         <button id="btnNuevo" type="button" class="btn btn-success">Nuevo</button>
                     </div>
                 </div>
@@ -87,7 +88,7 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                                         <td>'.$dat["stock"].      '</td>
                                         <td>'.$dat["description"].'</td>
                                         <td>$'.$money.        ' MXN</td>
-                                        <td><img class = "img" src="data:image;base64,'.base64_encode($dat["image"]).'">
+                                        <td><img class = "img" src="images/'.$dat["ID"].'.jpg">
                                         <td>'.$date->format("d/M/Y").'</td>
                                         <td></tr>';
                                 }

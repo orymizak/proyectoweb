@@ -1,12 +1,7 @@
 <?php
 
-    // error_reporting(E_ERROR);
+    error_reporting(E_ERROR);
     require "connection.php";
-
-    // $userID = 189;
-    // $productsID = 3;
-    // $quantBag = 1;
-    // $device = "1";
 
     $userID = $_POST['userID'];
     $productsID = $_POST['productID'];
@@ -42,7 +37,7 @@
 
                         if (is_null($device)) {
                             echo "<script type='text/javascript'>alert('No se puede añadir más producto.');
-                                    window.location.href='http://localhost/products.php';</script>";
+                                     window.location.href='../products.php';</script>";
                         }
                         break;
                     }
@@ -57,7 +52,7 @@
 
                         if (is_null($device)) {
                             echo "<script type='text/javascript'>alert('Producto ACTUALIZADO');
-                                    window.location.href='http://localhost/products.php';</script>";
+                                     window.location.href='../products.php';</script>";
                         }
                     }
                 }
@@ -77,12 +72,14 @@
 
         if (is_null($device)) {
             echo "<script type='text/javascript'>alert('Producto AÑADIDO');
-                    window.location.href='http://localhost/products.php';</script>";
+                                     window.location.href='../products.php';</script>";
         }
         $check = "1";
     }
-    if ($device = "1")
+
+    if ($device == "1")
     {
         echo json_encode($check);
     }
+    
 ?>
