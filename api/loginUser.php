@@ -22,8 +22,8 @@
                 $isBanned = $registro['restricted'];
                 if ($isBanned == 1)
                 {
-                    echo "<script type='text/javascript'>alert('El usuario está bloqueado')
-                    window.location.href='../index.php';</script>";
+                    echo "<script type='text/javascript'>alert('El usuario está bloqueado');
+                    window.location.href='../account.php';</script>";
                 }
                 if ($isBanned == 0)
                 {
@@ -34,7 +34,7 @@
                     $_SESSION['type'] = $registro['type'];
         
                     echo "<script type='text/javascript'>
-                    window.location.href='../index.php';</script>";
+                    window.location.href='../account.php';</script>";
 
                 }
 

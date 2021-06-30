@@ -1,202 +1,204 @@
-/* Global CSS */
+  .icon:hover, .link:hover, .link-logout:hover {
+  background: #ffe4cf;
+  color: #247ba0;
+  transition: 1s;
+  }
 
-.float{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
+  .float, .topnav {
   background-color:#f6828c;
-  color:#FFF;
+  }
+
+  .float {
+  position:fixed;
+  box-shadow: 2px 2px 3px #999;
   border-radius:50px;
   text-align:center;
-  box-shadow: 2px 2px 3px #999;
-}
+  height:60px;
+  bottom:40px;
+  width:60px;
+  right:40px;
+  color:#FFF;
+  }
 
-.my-float{
+  .my-float{
   margin-top:22px;
-}
+  }
+
   body {
-      margin: 0px;
-      font-family:bahnschrift,garamond,serif;
+  margin: 0px;
+  font-family:bahnschrift,garamond,serif;
   }
 
   .bg-text {
-      min-width: 30px;
+  min-width: 30px;
+  }
+
+  .topnav, #myLinks {
+  width:100%;
   }
 
   .topnav {
-      overflow: hidden;
-      background-color: #f6828c;
-      width:100%;
+  overflow: hidden;
   }
 
   div.nav-fill {
-      width: 300px;
+  width: 300px;
   }
 
   .topnav #myLinks {
-      position: absolute;
-      left: 161px;
-      width:80%;
-  }
-
-   #myLinks {
-      display:flex;
-      width:100%;
-   }
-
-  .topnav a {
-      font-weight: bold;
-      text-decoration: none;
-      display: block;
-      font-size: 20px;
-      text-align: center;
-  }
-
-  .topnav {
-      border-bottom: solid white 2px;
-  }
-
-  .topnav a.icon {
-      display: none;
-  }
-
-
-  .icon:hover, 
-  .link:hover,
-  .link-logout:hover {
-      background: #ffe4cf;
-      color: #247ba0;
-      transition: 1s;
-  }
-
-  .active {
-      padding: 6px 40px 0px 40px;
-      height: 48px;
-      width: 0px;
-      color: #ffe4cf;
-      box-sizing: border-box;
-  }
-
-/*COMPUTADORA*/
-@media screen and (min-width:811px) {
-
-  .link, .link-logout {
-      border-radius: 15px 15px 0px 0px;
-      background-size: 100% 200%; 
-      border-bottom: solid white 2px;
-      transition: 
-      box-shadow 3s,
-      background-color 1s,
-      background-position 1s, 
-      color 0s;
-      padding: 12px 20px 12px 20px;
-  }
-
-  .link:hover, .link-logout:hover {
-      background-size: 100% 200%;
-      box-shadow: inset -2px 2px 0 0 #ffffff, inset 2px 1px 0 0 #ffffff;
-      border-radius: 15px 15px 0px 0px;
-      transition: 
-      background-position .2s;
-    }
-
-  .link:hover {
-
-      background-image: linear-gradient(to bottom, #f6828c 50%, #ffe4cf 0%);
-      background-color: #F0D7C4;
-      border-bottom: rgba(0,0,0,0) 2px;
-  }
-
-  .link-logout:hover {
-      background-image: linear-gradient(to bottom, #f6828c 50%, #7FC2A1 0%);
-      border-bottom: solid white 2px;
-      background-color: #7FC2A1;
-  }
-
-  .link:focus, .link:hover, .link-logout:focus, .link-logout:hover {
-      background-position: 100% 100%;
-      transition: .6s;
-  }
-
-  .topnav #myLinks{
-      top: 0;
-  }
-
-  .link-logout {
-      position:absolute;
-      right: 0;
-      top: 0;
-  }
-}
-
-/*CELULAR*/
-@media screen and (max-width:810px) {
-
-
-  .linkBack{
-    background-color: rgba(0,0,0,0.5);
-    height: 1000px;
-    border-top: 2px solid white;
-    cursor:default;
-  }
-
-  .title {
-    background-color: rgba(0,0,0,0);
-  }
-
-  .active {
-      width: 100%;
-    background-color:#f6828c;
-  }
-
-  .topnav {
-    background-color: rgba(0,0,0,0);
-      overflow: hidden;
-      position:fixed;
-      width:100%;
-  }
-
-  .topnav #myLinks {
-      display: none;
-      position:initial;
-      width: 100%;
+  position: absolute;
+  left: 161px;
+  width:80%;
   }
 
   #myLinks {
-      border-top:solid 2px white;
+  display:flex;
   }
 
-  .link, .link-logout {
-      padding: 20px 0px 20px 0px;
-      background-color: #7FC2A1;
+  .link:hover, .link-logout:hover, .topnav a  {
+  text-decoration: none;
+  }
+
+  .topnav a {
+  text-align: center;
+  font-weight: bold;
+  /*font-size: 20px;*/
+  display: block;
+  }
+
+  .topnav {
+  border-bottom: solid white 2px;
   }
 
   .topnav a.icon {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
+  display: none;
+  }
+
+  .active {
+  padding: 6px 40px 0px 40px;
+  box-sizing: border-box;
+  color: #ffe4cf;
+  height: 48px;
+  width: 0px;
+  }
+
+  /*COMPUTADORA*/
+@media screen and (min-width:811px) {
+  
+  .link:focus, .link:hover, .link-logout:focus, .link-logout:hover {
+  background-position: 100% 100%;
+  transition: .6s;
+  }
+
+  .link, .link-logout, .link:hover, .link-logout:hover {
+  border-radius: 15px 15px 0px 0px;
+  background-size: 100% 200%;
+  } 
+
+  .link:hover, .link-logout:hover {
+  box-shadow: inset -2px 2px 0 0 #ffffff, inset 2px 1px 0 0 #ffffff;
+  transition: 
+  background-position .2s;
+  }
+
+  .topnav #myLinks, .link-logout{
+  top: 0;
+  }
+
+  .link, .link-logout {
+  border-bottom: solid white 2px;
+  padding: 12px 20px 12px 20px;
+  transition: 
+  background-position 1s, 
+  background-color 1s,
+  box-shadow 3s,
+  color 0s;
+  }
+
+  .link-logout:hover {
+  background-image: linear-gradient(to bottom, #f6828c 50%, #7FC2A1 0%);
+  border-bottom: solid white 2px;
+  background-color: #7FC2A1;
+  }
+
+  .link-logout {
+  position:absolute;
+  right: 0;
+  }
+
+  .link:hover {
+  background-image: linear-gradient(to bottom, #f6828c 50%, #ffe4cf 0%);
+  background-color: #F0D7C4;
+  border-bottom: rgba(0,0,0,0) 2px;
+  }
+
+}
+
+  /*CELULAR*/
+@media screen and (max-width:810px) {
+
+  .icon:active, .link:active {
+  color: #247ba0;
+  }
+
+  .bg-text, .bg-text-login {
+  margin-top:50px;
+  }
+  
+  #myLinks, .linkBack {
+  border-top:solid 2px white;
+  }
+
+  .link, .link-logout {
+  padding: 20px 0px 20px 0px;
+  background-color: #7FC2A1;
+  }
+
+  .active, .topnav {
+  width: 100%;
+  }
+
+  .title, .topnav {
+  background-color: rgba(0,0,0,0);
+  }
+
+  .linkBack{
+  background-color: rgba(0,0,0,0.5);
+  cursor:default;
+  height: 1000px;
+  }
+
+  .active {
+  background-color:#f6828c;
+  }
+
+  .topnav {
+  overflow: hidden;
+  position: fixed;
+  }
+
+  .topnav #myLinks {
+  position: initial;
+  display: none;
+  width: 100%;
+  }
+
+  .topnav a.icon {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
   }
 
   .icon:hover {
-      color: white;
-  }
-
-  .icon:active, .link:active {
-      color: #247ba0;
+  color: white;
   }
 
   .icon {
-    padding:12px 10px;
-      width:30px;
-      height:24px;
+  padding:12px 10px;
+  height:24px;
+  width:50px;
+  height:48px;
   }
-  
-  .bg-text, .bg-text-login {
-    margin-top:50px;
-  }
-
 
 }

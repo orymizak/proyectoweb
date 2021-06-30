@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML lang ="es">
   <head>
-      <?php include('navbar.php');?>
+    <?php include "_navbar.php" ?>
       <meta charset="utf-8">
       <title>Seyda || Cat&aacute;logo</title>
     	<meta name="description" content="Tienda de pulseras y otros accesorios">
@@ -29,17 +29,18 @@
           <p>
             Ingresa tu usuario o tu tel&eacute;fono:
           </p>
-            <input type = "text" name = "identification" minlength="8" maxlength="12" required>
+            <input type = "text" name = "identification" class="form-control" minlength="8" maxlength="12" required>
           <p>
             Ingresa tu nueva contrase&ntilde;a:
           </p>
-            <input type = "text" name = "newpassword" minlength="8" maxlength="12" required>
+            <input type = "text" name = "newpassword" class="form-control" minlength="8" maxlength="12" required>
           <p>
             Ingresa tu hashkey:
           </p>
-            <input type = "text" name = "hash" minlength="12" maxlength="12" required>
-          <p>
-            <input type = "submit" value = "Enviar">
+            <input class="form-control" type = "text" name = "hash" minlength="12" maxlength="12" required>
+          <p><br>
+            <input type="button" class = "btn btn-danger"  value="Volver" onclick= "history.back();">
+            <input type = "submit" class = "btn btn-primary" value = "Enviar">
           </p>
           </form>
       </div>

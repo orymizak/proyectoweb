@@ -16,9 +16,9 @@
             $sql = "UPDATE users SET password = '$hash' WHERE ID = '$userID'";
             $result = $mysqli->prepare($sql);
             $result->execute();
-            echo '<script>alert("La contraseña se ha cambiado correctamente");window.location.href="../login.php"</script>';
+            echo '<script>alert("La contraseña se ha cambiado correctamente");window.location.href="../account.php"</script>';
             break;
         }
-        echo '<script>alert("La contraseña vieja no es correcta, reintente");window.location.href="../login.php"</script>';
+        echo '<script>alert("La contraseña vieja no es correcta, reintente");window.location.href="../account.php"</script>';
     }
 ?>

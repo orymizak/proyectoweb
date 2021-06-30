@@ -51,7 +51,7 @@
                         $check = "3";
 
                         if (is_null($device)) {
-                            echo "<script type='text/javascript'>alert('Producto ACTUALIZADO');
+                            echo "<script type='text/javascript'>alert('Producto añadido.');
                                      window.location.href='../products.php';</script>";
                         }
                     }

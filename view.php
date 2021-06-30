@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML lang ="es">
   <head>
-      <?php include('navbar.php');?>
+    <?php include "_navbar.php" ?>
       <meta charset="utf-8">
       <title>Seyda || Cat&aacute;logo</title>
     	<meta name="description" content="Tienda de pulseras y otros accesorios">
@@ -25,13 +25,9 @@
   $result = $mysqli->prepare($sql);
   $result->execute();
 
-  // if (isset($_SESSION['username']) == '') {
-  //   echo "<p>Aviso: para agregar art&iacute;culos a tu bolsa, <a href ='login.php'>inicia sesi&oacute;n</a></p><hr>";
-  // }
-
   while($row = $result->fetch(PDO::FETCH_ASSOC)){
   echo '<header class = "title">
-          <h1>'.$row['name'].'</h1>
+          <h2>'.$row['name'].'</h2>
         </header>
         <hr>';
     if (isset($_SESSION['username']) == '') {
@@ -40,7 +36,6 @@
         echo '
           <center>
           <section class = "main3">
-            <a href = "#">
               <div class = "imgCont">
                 <center>
                 <img class = "imgContent2" src = "images/'.$row['ID'].'.jpg" alt ="">
@@ -49,16 +44,23 @@
               <h2 style = "color:black">
               Descripci&oacute;n del art&iacute;culo:<br>
               </h2>
-              <p class = "textMain3">
+              <b><p class = "textMain3">
                 '.$row['description'].'
-              </p>
-              <p class = "textMain3">
-                  <b>Disponible: '.$row['stock'].'</b>
-              </p>
+              </p><br>
+              <p class = "textMain3">';
+              
+                if ($row['stock'] <= 0){
+                  echo '<span style = "color:red">Temporalmente agotado</span>';
+                }
+                else
+                {
+                  echo 'Disponible: '.$row['stock'];
+                }
+
+              echo '</b></p>
               <p class = "textMain">
                 $'.$row['price'].' MXN
-              </p>
-            </a>';
+              </p>';
 
         if (isset($_SESSION['username']) != '' && $row['stock'] > 0) {
           echo '
@@ -77,7 +79,6 @@
           </form>';
         }
         if ($row['stock'] <= 0){
-          echo '<span style = "color:red">Temporalmente agotado</span>';
         }
   }
 ?>
