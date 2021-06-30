@@ -310,8 +310,13 @@
   	.footCont{
 		font-size: 13px;	
   	}
+	
+	.footCont a{
+		font-size:10px;
+	}
 
   	.footCont{
   		height: 70px;
-  	}
+  	}	
+
 }

@@ -9,6 +9,7 @@
       <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
     	<link rel ="stylesheet" href="css/style.css"/>
     	<link rel ="stylesheet" href="js/javascript.js"/>
+	   <meta name="google-site-verification" content="8_fBiy04ffw9vKgDz_RbkMv4pekDAP-sguCMl_uSF78" />
   </head>
 
 <body>
@@ -19,7 +20,7 @@
 
 	      <header class = "title">
 	        <h1>Bienvenido a</h1>
-	        <img src="src/seyda.png"/>
+	        <img src="src/seyda.png" alt="La mejor tienda de pulseras y accesorios"/>
 	      </header>
 
 	      <p>

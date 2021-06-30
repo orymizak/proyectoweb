@@ -4,6 +4,6 @@
     session_destroy();
     echo'<script type="text/javascript">
     alert("Usted se ha desconectado.");
-    window.location.href="https://localhost/index.php";
+    window.location.href="http://orymizak.ddns.net/";
     </script>';
 ?>

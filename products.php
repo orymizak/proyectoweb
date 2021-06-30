@@ -22,7 +22,7 @@
         </header>
 
         <p>
-          Descripci&oacute;n gen&eacute;rica.
+          Los mejores accesorios que van bien contigo
         </p>
         <hr>
 
