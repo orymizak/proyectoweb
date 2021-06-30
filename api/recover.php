@@ -18,7 +18,7 @@
             $sql = "UPDATE users SET password = '$hash' WHERE username = '$userID'";
             $result = $mysqli->prepare($sql);
             $result->execute();
-            echo '<script>alert("Usted ha cambiado su contraseña con éxito."); window.location.href ="../login.php"</script>';
+            echo '<script>alert("Usted ha cambiado su contraseña con éxito."); window.location.href ="../account.php"</script>';
             break;
         }
         echo '<script>alert("No se pudo corroborar su identidad. Reintente."); window.location.href ="../forgot.php"</script>';

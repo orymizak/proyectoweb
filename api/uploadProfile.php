@@ -15,7 +15,7 @@
         $result = $mysqli->prepare($sql);
         $result->execute();
 
-        echo '<script>window.location.href="../login.php";</script>';
+        echo '<script>window.location.href="../account.php";</script>';
         die();
     }
     else

@@ -27,7 +27,7 @@
 
         if ($result_check->rowCount() == 1)
         {   
-            echo '<script>alert("Error: el usuario ya existe."); window.location.href="register.php";</script>';
+            echo '<script>alert("Error: el usuario ya existe."); window.location.href="../register.php";</script>';
         }
         else
         {
@@ -44,7 +44,7 @@
                     // Realiza la consulta
                     $result->execute();
                     
-                    echo '<script>alert("Se ha registrado con éxito."); window.location.href="account.php";</script>';
+                    echo '<script>alert("Se ha registrado con éxito."); window.location.href="../account.php";</script>';
                 }
                 else
                 {
@@ -56,7 +56,7 @@
             else
             {
                 //si entra aquí significa que no se ha pulsado el Captcha
-                echo '<script>alert("Debe ingresar el captcha."); window.location.href="register.php";</script>';
+                echo '<script>alert("Debe ingresar el captcha."); window.location.href="../register.php";</script>';
                 exit();
             }
         }

@@ -6,7 +6,7 @@
   $result->execute();
 
   if (isset($_SESSION['username']) == '') {
-    echo "<p>Aviso: para agregar art&iacute;culos a tu bolsa, <a href ='login.php'>inicia sesi&oacute;n</a></p><hr>";
+    echo "<p>Aviso: para agregar art&iacute;culos a tu bolsa, <a href ='account.php'>inicia sesi&oacute;n</a></p><hr>";
   }
 
   while($row = $result->fetch(PDO::FETCH_ASSOC)){
@@ -16,7 +16,7 @@
             <input hidden name = "product_ID" value = "'.$row['ID'].'">
               <div class = "imgCont">
                 <center>
-                  <input type = "image" class = "imgContent" src = "../images/'.$row['ID'].'.jpg"/>
+                  <input type = "image" class = "imgContent" title="'.$row['name'].'" src = "../images/'.$row['ID'].'.jpg"/>
                 </center>
               </div>
               <div class = "txtCont">

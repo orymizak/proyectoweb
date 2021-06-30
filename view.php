@@ -67,6 +67,7 @@
           <form method="post" action="api/addtocart.php">
             <input hidden name = "userID" value ="'.$_SESSION['ID'].'"/>
             <input hidden name = "productID" value ="'.$row['ID'].'"/>
+            <center>
             <select name = "quantity" style = "border:1px solid black">';
 
               for ($i = 1; $i != $row['stock']+1; $i++)
@@ -75,7 +76,7 @@
               }
 
               echo $row['stock'].'</select>
-            <input type = "submit" value ="A&ntilde;adir"/>
+            <input type = "submit" class = "btn btn-primary" id = "btn-add" value ="A&ntilde;adir"/></center>
           </form>';
         }
         if ($row['stock'] <= 0){
